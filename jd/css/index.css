@@ -20,7 +20,9 @@ body {
     min-width: 1190px;
     font: 12px/1.5 Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif;
     font-size: 12px;
+    color: #666;
     background: #f6f6f6;
+
     -webkit-font-smoothing: antialiased;
 }
 
@@ -37,19 +39,13 @@ body {
 #mycart .dropdown,
 .sitenav .dropdown {
     display: none;
-    background: #fff;
     border: 1px solid #ccc;
+    background: #fff;
     -webkit-box-shadow: 1px 2px 1px rgba(0, 0, 0, .1);
-    box-shadow: 1px 2px 1px rgba(0, 0, 0, .1);
+            box-shadow: 1px 2px 1px rgba(0, 0, 0, .1);
 }
 
-
-
-
-
-
 /*z-index*/
-
 .sity .mysity {
     z-index: 1;
 }
@@ -72,15 +68,10 @@ body {
 #mycart .content {
     z-index: 1;
 }
-
-
-
-
 /*z-index end*/
 
 
 /*sitenav*/
-
 .sitenav {
     position: relative;
     line-height: 28px;
@@ -103,12 +94,7 @@ body {
 .sitenav i {
     color: #999;
 }
-
-
-
-
 /*sity */
-
 .sity {
     position: relative;
     display: inline-block;
@@ -175,15 +161,10 @@ body {
 .selected a:hover {
     background: #f10215;
 }
-
-
-
-
 /*city end*/
 
 
 /*sitenav menu*/
-
 .sitenav .menu {
     float: right;
     list-style: none;
@@ -211,11 +192,7 @@ body {
     color: #f10215;
 }
 
-
-
-
 /*myjd */
-
 #myjd:hover .item {
     padding-bottom: 1px;
     border: 1px solid #ccc;
@@ -244,15 +221,9 @@ body {
 .myjd-list li {
     width: 126px;
 }
-
-
-
-
 /*myjd end*/
 
-
 /*serve*/
-
 #serve:hover .item {
     padding-bottom: 1px;
     border: 1px solid #ccc;
@@ -295,15 +266,9 @@ body {
     padding-top: 10px;
     border-top: 1px dotted #ccc;
 }
-
-
-
-
 /*serve end*/
 
-
 /*sitemap*/
-
 #sitemap:hover .item {
     padding-bottom: 1px;
     border: 1px solid #ccc;
@@ -318,7 +283,7 @@ body {
 #sitemap .dropdown {
     position: absolute;
     top: 30px;
-    right: -84px;
+    right: -79px;
     width: 1188px;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -350,21 +315,12 @@ body {
 #sitemap .dropdown li {
     width: 80px;
 }
-
-
-
-
 /*sitemap end*/
-
-
 /*sitenav menu*/
-
-
 /*sitenav end*/
 
 
 /*header*/
-
 .header {
     height: 140px;
 }
@@ -382,14 +338,9 @@ body {
     background: #fff;
     background: url(../img/logo.v3.jpg);
     -webkit-box-shadow: 0 -10px 10px rgba(0, 0, 0, .2);
-    box-shadow: 0 -10px 10px rgba(0, 0, 0, .2);
+            box-shadow: 0 -10px 10px rgba(0, 0, 0, .2);
 }
-
-
-
-
 /*search*/
-
 .search {
     position: absolute;
     top: 25px;
@@ -439,15 +390,10 @@ body {
     font-weight: 800;
     color: #fff;
 }
-
-
-
-
 /*search end*/
 
 
 /*my cart*/
-
 #mycart {
     position: relative;
     position: absolute;
@@ -511,15 +457,10 @@ body {
     vertical-align: middle;
     background: url(../img/emptycart.png) no-repeat;
 }
-
-
-
-
 /*mycart end*/
 
 
 /*sale inf key word*/
-
 .saleinf {
     position: absolute;
     top: 65px;
@@ -530,15 +471,10 @@ body {
 .saleinf .selected {
     color: #f10215;
 }
-
-
-
-
 /*saleinf  key word end*/
 
 
 /*header nav */
-
 #headernav {
     position: absolute;
     bottom: 0;
@@ -561,35 +497,21 @@ body {
     margin-top: 15px;
     background: #ccc;
 }
-
-
-
-
 /*header nav end*/
-
-
 /*header end*/
 
-
-/*mainnav start*/
-
-.mainnav {}
-
+/*mainnav*/
 .mainnav .wrapper {
     position: relative;
     height: 480px;
 }
 
-
-
-
-/*lnav start*/
-
+/*lnav*/
 .mainnav .lnav {
+    float: left;
     width: 190px;
     height: 100%;
     background: #666;
-    float: left;
 }
 
 .mainnav .lnav ul {
@@ -598,11 +520,11 @@ body {
 }
 
 .mainnav .lnav li {
-    line-height: 28px;
-    padding-left: 12px;
     height: 28px;
-    user-select: none;
+    padding-left: 12px;
     font-size: 0;
+    line-height: 28px;
+    user-select: none;
 }
 
 .mainnav .lnav span {
@@ -617,33 +539,27 @@ body {
 }
 
 .mainnav .lnav li:hover {
-    background: #999999;
+    background: #999;
 }
 
 .mainnav .lnav a:hover {
     color: #f10215;
 }
-
-
-
-
 /*lnav end*/
 
-
-/*middle content start*/
-
+/*middle content*/
 .mainnav .bannarbox {
     float: left;
-    margin-left: 10px;
-    height: 100%;
     width: 790px;
+    height: 100%;
+    margin-left: 10px;
 }
 
 .mainnav .bannarbox .tbanner {
+    position: relative;
+    overflow: hidden;
     width: 100%;
     height: 340px;
-    overflow: hidden;
-    position: relative;
 }
 
 .mainnav .tbanner li {
@@ -651,54 +567,25 @@ body {
     z-index: 0;
 }
 
-
-
-
-/*.mainnav .tbanner .lastfocus {
-    z-index:1;
-}*/
-
-
-/*.mainnav .tbanner .focus {
-    z-index: 2;
-    animation: fadein 2s;
-}*/
-
-
-/*.fadein {
-    animation: fadein 2s;
-}
-
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-*/
-
 .tbanner .indexbox {
     position: absolute;
+    z-index: 3;
     bottom: 20px;
     left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
     padding: 4px 8px;
+    font-size: 0;
+    transform: translateX(-50%);
     border-radius: 12px;
     background: rgba(100%, 100%, 100%, .3);
-    font-size: 0;
 }
 
 .tbanner .indexbox .index {
+    display: inline-block;
     width: 12px;
     height: 12px;
+    margin: 0;
     border-radius: 6px;
     background: #fff;
-    /*float: left;*/
-    margin: 0;
-    display: inline-block;
 }
 
 .tbanner .indexbox div:not(:last-child) {
@@ -710,21 +597,18 @@ body {
 }
 
 .mainnav .bannarbox .under {
-    margin-top: 10px;
     width: 100%;
     height: 130px;
+    margin-top: 10px;
 }
 
 .mainnav .bannarbox .lbanner,
 .mainnav .bannarbox .rbanner {
     float: left;
-    height: 100%;
     width: 390px;
+    height: 100%;
     background: white;
 }
-
-
-
 /*middle content end*/
 
 .mainnav .bannarbox .rbanner {
@@ -738,38 +622,38 @@ body {
     background: white;
 }
 
-
-
 /*rnav*/
-
 .userInf {
-    /*    padding:15px 15px;
-    padding-right:0;*/
-    border-bottom: 1px solid #e6e6e6;
     height: 115px;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .userInf .content {
-    padding: 15px 15px;
     overflow: hidden;
+    height: 45px;
+    padding: 15px 15px;
+    font-size: 12px;
 }
 
 .userInf .userFace {
     float: left;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    margin-top: 2px;
     border-radius: 50px;
-    background: #f10215;
+    background: #ccc;
 }
-
+.userInf .userFace img {
+    width: 40px;
+    height: 40px;
+}
 .userInf .userSign {
     float: left;
     padding-left: 10px;
-    height: 45px;
 }
 
 .userInf .userSign p {
-    margin-top: 4px;
+    margin-bottom: 6px;
 }
 
 .userInf .userPrefit {
@@ -780,39 +664,49 @@ body {
     display: inline-block;
     width: 70px;
     height: 20px;
-    border: 2px solid #f10215;
     margin-right: 10px;
     font-size: 12px;
+    line-height: 20px;
     text-align: center;
     color: #f10215;
-    line-height: 20px;
+    border: 2px solid #f10215;
 }
 
 .userInf .userPrefit a:hover {
     color: #fff;
     background: #f10215;
 }
-
-
 /*userInf end*/
 
+/*notice end*/
 .notice {
-    padding: 0 15px;
     height: 154px;
+    padding: 0 15px;
+    cursor: pointer;
 }
 
 .notice .title {
+    position: relative;
     padding: 8px 0 4px;
-    border-bottom: 1px solid #e6e6e6;
     line-height: 14px;
+    border-bottom: 1px solid #e6e6e6;
 }
 
-.notice .title #onsale {
+.notice .title .pipe {
+    position: absolute;
+    bottom: 0;
+    width: 28px;
+    height: 2px;
+    transition: transform .3s ease;
+    background: #f10215;
+}
+
+.notice .title #onsalebtn {
     padding-right: 12px;
     border-right: 1px solid #dfe0e1;
 }
 
-.notice .title #announce {
+.notice .title #announcebtn {
     padding-left: 12px;
 }
 
@@ -825,43 +719,381 @@ body {
     line-height: 24px;
 }
 
+.notice .matter #mannounce{
+    display: none;
+}
 
+.notice .matter li {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.notice li:hover {
+    color: #f10215;
+}
 /*notice end */
 
 .serviceTag {
-    /*background: yellow;*/
-    margin-left: -1px;
     overflow: hidden;
 }
 
 .serviceTag ul {
     width: 192px;
     height: 210px;
+    margin-left: -1px;
 }
 
 .serviceTag li {
+    position: relative;
     float: left;
-    border-top: 1px solid #dfe0e1;
-    border-left: 1px solid #dfe0e1;
     width: 47px;
     height: 69px;
     text-align: center;
+    border-top: 1px solid #dfe0e1;
+    border-left: 1px solid #dfe0e1;
 }
 
-.serviceTag i {
-    padding-top: 26px;
-    font-size: 24px;
+.serviceTag a {
+    display: block;
+    margin-top: 14px;
 }
-
 .serviceTag span {
     display: block;
     height: 22px;
     line-height: 22px;
+    color: #666;
 }
 
-.serviceTag li:hover span {
+.serviceTag li:hover span:not(.icornerdes) {
     color: #f10215;
 }
 
+.serviceTag i {
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+    background: url(../img/servicetag.png) no-repeat;
+    background-size: 156px 148px;
+}
 
+.serviceTag .iphone {
+    background-position: 0 -88px;
+}
+
+.serviceTag .ifly {
+    background-position: 0 -44px;
+}
+
+.serviceTag .ihotel {
+    background-position: -44px -88px;
+}
+
+.serviceTag .itrain {
+    background-position: -88px -88px;
+}
+.serviceTag .icompany {
+    background-position: -88px -44px;
+}
+
+.serviceTag .ioil {
+    background-position: 0 0;
+}
+
+.serviceTag .imovie {
+    background-position: -44px -44px;
+}
+
+.serviceTag .igame {
+    background-position: -88px 0;
+}
+
+.serviceTag .ipeople {
+    background-position: -132px 0;
+}
+
+.serviceTag .imoney {
+    background-position: -132px -44px;
+}
+
+.serviceTag .igiftcard {
+    background-position: -132px -88px;
+}
+
+.serviceTag .ichit {
+    background-position: -44px 0;
+}
+
+.serviceTag .icorner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    background: url(../img/corner.png) no-repeat;
+    background-size: 12px 16px;
+}
+
+.serviceTag .icornerdes {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 12px;
+    color: white;
+}
 /*mainnav end*/
+
+/*secondkill*/
+.secondkill {
+    margin-top: 10px;
+}
+
+.secondkill .wrapper {
+    height: 100px;
+}
+
+.secondkill .headbar {
+    position: relative;
+    height: 55px;
+    padding-right: 20px;
+    padding-left: 30px;
+    color: white;
+    background: url(../img/seckillbar.png) no-repeat;
+    background-size: 100% 55px;
+}
+
+.secondkill .headbar i {
+    background: url(../img/seckillbartag.png) no-repeat;
+    background-size: 218px 188px;
+}
+
+.secondkill .headbar .ilcorner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    background-position: -194px -52px;
+}
+.secondkill .lcontent > *{
+    display: block;
+    float: left;
+}
+
+.secondkill .lcontent .iclock {
+    width: 34px;
+    height: 40px;
+    margin-top: 8px;
+    margin-right: 8px;
+    background-position: 0 -40px;
+    /*vertical-align: top; */
+}
+
+.secondkill .lcontent .irarrow {
+    width: 15px;
+    height: 16px;
+    margin-top: 25px;
+    margin-left: 2px;
+    background-position: -154px -40px;
+}
+
+.secondkill .lcontent span {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 45px;
+}
+
+.secondkill .headbar .jdseckill {
+    margin: 0;
+    margin-top: 10px;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 35px;
+}
+
+.secondkill .headbar .lcontent {
+    float: left;
+}
+/*lcontent end*/
+
+/*rcontent*/
+.secondkill .headbar .rcontent {
+    float: right;
+    font-size: 14px;
+}
+
+.secondkill .rcontent > * {
+    float: left;
+}
+.secondkill .rcontent > span {
+    margin-top: 10px;
+    line-height: 45px;
+}
+
+.secondkill .timer {
+    width: 129px;
+    padding-right: 8px;
+    padding-left: 6px;
+    font-size: 0;
+}
+
+.secondkill .timer span {
+    display: inline-block;
+    width: 35px;
+    height: 37px;
+    margin-top: 10px;
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 37px;
+    text-align: center;
+    color: #f10215;
+    border-radius: 3px;
+    background: #440106;
+}
+
+.secondkill .timer .colon {
+    display: inline-block;
+    width: 4px;
+    height: 12px;
+    margin: 0 4px;
+    margin-top: 22px;
+    vertical-align: top;
+}
+
+.secondkill .timer .icolon {
+    width: 4px;
+    height: 4px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    background: #440106;
+}
+/*timer end*/
+
+/*goodslist*/
+.secondkill .seckillb {
+    height: 225px;
+    padding: 12px 0 13px;
+    background: white;
+}
+
+.secondkill .goodslist {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 999px;
+}
+.secondkill .goodslist ul {
+    width: 6000px;
+}
+.secondkill .goods {
+    float: left;
+    width: 170px;
+    height: 225px;
+    padding: 0 14px 0 15px;
+    color: #999;
+    border-right: 1px solid #e7e7e7;
+}
+
+.secondkill .img {
+    display: block;
+    text-align: center;
+}
+.secondkill .goods img {
+    width: 130px;
+    height: 130px;
+    margin: 17px 0;
+    transition: .4s ease;
+    background: green;
+}
+.secondkill .goods img:hover {
+    transform: translateY(-5px);
+}
+
+.secondkill .describe {
+    overflow: hidden;
+    height: 32px;
+    line-height: 16px;
+}
+
+.secondkill .current {
+    margin-right: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #f10214;
+}
+
+.secondkill .original {
+    font-size: 12px;
+}
+.secondkill .i{
+    margin-right: 3px;
+    font-family: arial;
+    font-size: 12px;
+}
+
+/*slidebtn*/
+.slidebtn {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 50px;
+    line-height: 54px;
+    transform: translateY(-50%);
+    text-align: center;
+    background: rgba(0,0,0,.1);
+}
+
+#slideleft {
+    left: 7px;
+}
+
+#slideleft i {
+    font-size: 20px;
+    transform: rotate(90deg);
+    opacity: .7;
+    color: #272526;
+}
+
+#slideright {
+    right: 7px;
+}
+
+#slideright i {
+    font-size: 20px;
+    transform: rotate(-90deg);
+    opacity: .7;
+    color: #272526;
+}
+/*slidebtn end*/
+
+.secondkill .slideshow {
+    position: relative;
+    float: right;
+    overflow: hidden;
+    width: 180px;
+    height: 100%;
+    margin-right: 10px;
+    background: yellow;
+}
+
+.secondkill .slideshow a {
+    position: absolute;
+}
+
+
+.secondkill .slideshow .pointBox {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-bottom: 5%;
+    transform: translateX(-50%);
+}
+.secondkill .slideshow .pointBox i {
+    width: 10px;
+    height: 10px;
+    margin: 0 3px;
+    border-radius: 5px;
+    background: #342a2d;
+}

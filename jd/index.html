@@ -709,7 +709,9 @@
             <div class="rnav">
                 <div class="userInf">
                     <div class="content">
-                        <div class="userFace"></div>
+                        <div class="userFace">
+                            <img src="img/dog.png">
+                        </div>
                         <div class="userSign">
                             <p>Hi, 欢迎来到京东!</p>
                             <p>
@@ -726,15 +728,22 @@
                 <!-- userInf end -->
                 <div class="notice">
                     <div class="title">
-                        <span id="onsale">促销</span>
-                        <span id="announce">公告</span>
+                        <span id="onsalebtn">促销</span>
+                        <span id="announcebtn">公告</span>
                         <span id="more">更多</span>
+                        <div class="pipe" id="noticebar"></div>
                     </div>
                     <div class="matter">
-                        <ul>
+                        <ul id="monsale">
                             <li>车品品类日满198减100</li>
                             <li>30万好书满300减100</li>
                             <li>车品品类日满198减100</li>
+                            <li>30万好书满300减100</li>
+                        </ul>
+                        <ul id="mannounce">
+                            <li>广州部分地区受道路限行</li>
+                            <li>关于召回普利司通（天津）关于召回普利司通（天津）</li>
+                            <li>京东物流推出配送员统一外京东物流推出配送员统一外</li>
                             <li>30万好书满300减100</li>
                         </ul>
                     </div>
@@ -744,74 +753,78 @@
                     <ul>
                         <li>
                             <a href="#">
-                               <i class="iconfont icon-huafei"></i>
+                               <i class="iphone"></i>
                                <span>话费</span> 
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                               <i class="iconfont icon-huafei"></i>
-                               <span>话费</span> 
+                               <i class="ifly"></i>
+                               <span>机票</span> 
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                               <i class="iconfont icon-huafei"></i>
-                               <span>话费</span> 
+                               <i class="ihotel"></i>
+                               <span>酒店</span> 
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                               <i class="iconfont icon-huafei"></i>
-                               <span>话费</span> 
+                                <i class="icorner"></i>
+                                <span class="icornerdes">减</span>
+                               <i class="itrain"></i>
+                               <span>火车票</span> 
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                               <i class="iconfont icon-huafei"></i>
-                               <span>话费</span> 
+                               <i class="icompany"></i>
+                               <span>企业购</span> 
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                               <i class="iconfont icon-huafei"></i>
-                               <span>话费</span> 
+                                <i class="icorner"></i>
+                                <span class="icornerdes">减</span>
+                               <i class="ioil"></i>
+                               <span>加油卡</span> 
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                               <i class="iconfont icon-huafei"></i>
-                               <span>话费</span> 
+                               <i class="imovie"></i>
+                               <span>电影票</span> 
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                               <i class="iconfont icon-huafei"></i>
-                               <span>话费</span> 
+                               <i class="igame"></i>
+                               <span>游戏</span> 
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                               <i class="iconfont icon-huafei"></i>
-                               <span>话费</span> 
+                               <i class="ipeople"></i>
+                               <span>众筹</span> 
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                               <i class="iconfont icon-huafei"></i>
-                               <span>话费</span> 
+                               <i class="imoney"></i>
+                               <span>理财</span> 
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                               <i class="iconfont icon-huafei"></i>
-                               <span>话费</span> 
+                               <i class="igiftcard"></i>
+                               <span>礼品卡</span> 
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                               <i class="iconfont icon-huafei"></i>
-                               <span>话费</span> 
+                               <i class="ichit"></i>
+                               <span>白条</span> 
                             </a>
                         </li>
                     </ul>
@@ -822,6 +835,152 @@
         <!-- mainnav wrapper end -->
     </div>
     <!-- mainnav end -->
+    <div class="secondkill">
+        <div class="wrapper">
+            <div class="headbar">
+                <div class="lcontent">
+                    <i class="ilcorner"></i>
+                    <i class="iclock"></i>
+                    <span class="jdseckill">京东秒杀</span>
+                    <span>总有你想不到的低价</span>
+                    <i class="irarrow"></i>
+                </div>
+                <div class="rcontent">
+                    <span>当前场次</span>
+                    <div class="timer">
+                        <span id="timerhour">01</span>
+                        <div class="colon">
+                            <i class="icolon"></i>
+                            <i class="icolon"></i>
+                        </div>
+                        <span id="timerminute">01</span>
+                        <div class="colon">
+                            <i class="icolon"></i>
+                            <i class="icolon"></i>
+                        </div>
+                        <span id="timerseconde">01</span>
+                    </div>
+                    <span>后结束抢购</span>
+                </div>
+            </div>
+            <!-- bar end -->
+            <div class="seckillb">
+                <div class="goodslist">
+                    <div class="">
+                        <div class="slidebtn" id="slideleft">
+                            <i class="iconfont icon-arrow-down"></i>
+                        </div>
+                        <div class="slidebtn" id="slideright">
+                            <i class="iconfont icon-arrow-down"></i>
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="goods">
+                            <a href="#" class="img">
+                                <img src="img/59ff2358N51bdb6fc.jpg" >
+                            </a>
+                            <div class="inf">
+                                <p class="describe">
+                                    五丰 美仑达 精品琯溪蜜柚 红心柚子2个装 2kg~2.5kg 简致塑袋装 新鲜水果
+                                </p>
+                                <p class="piece">
+                                    <i class="imoney">¥</i>
+                                    <span class="current">25.80</span>
+                                    <i class="imoney">¥</i>
+                                    <del class="original">59.80</del>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="goods">
+                            <a href="#" class="img">
+                                <img src="img/59ff2358N51bdb6fc.jpg" >
+                            </a>
+                            <div class="inf">
+                                <p class="describe">
+                                    坚果（JmGO）G3 家用 投影机 投影仪（800P高清分辨率 1000
+                                </p>
+                                <p class="piece">
+                                    <i class="imoney">¥</i>
+                                    <span class="current">25.80</span>
+                                    <i class="imoney">¥</i>
+                                    <del class="original">59.80</del>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="goods">
+                            <a href="#" class="img">
+                                <img src="img/59ff2358N51bdb6fc.jpg" >
+                            </a>
+                            <div class="inf">
+                                <p class="describe">
+                                    馨雅丽时尚提花暗纹内衣胸罩 无钢圈聚拢性感文胸H03 蓝灰 8
+                                </p>
+                                <p class="piece">
+                                    <i class="imoney">¥</i>
+                                    <span class="current">25.80</span>
+                                    <i class="imoney">¥</i>
+                                    <del class="original">59.80</del>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="goods">
+                            <a href="#" class="img">
+                                <img src="img/59ff2358N51bdb6fc.jpg" >
+                            </a>
+                            <div class="inf">
+                                <p class="describe">
+                                    南极人（Nanjiren） 南极人儿童内衣男女童黄金绒暖甲保暖内
+                                </p>
+                                <p class="piece">
+                                    <i class="imoney">¥</i>
+                                    <span class="current">25.80</span>
+                                    <i class="imoney">¥</i>
+                                    <del class="original">59.80</del>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="goods">
+                            <a href="#" class="img">
+                                <img src="img/59ff2358N51bdb6fc.jpg" >
+                            </a>
+                            <div class="inf">
+                                <p class="describe">
+                                    澳柯玛（AUCMA）NS21AD35 可移动电暖炉家用取暖器/电暖
+                                </p>
+                                <p class="piece">
+                                    <i class="imoney">¥</i>
+                                    <span class="current">25.80</span>
+                                    <i class="imoney">¥</i>
+                                    <del class="original">59.80</del>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- goodslist end -->
+                <div class="slideshow">
+                    <ul class="imglist">
+                        <li>
+                           <a href="#">
+                            <img src="img/tbanner.jpg">
+                            </a> 
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/tbanner1.jpg">
+                            </a> 
+                        </li> 
+                    </ul>
+                    <div class="pointBox">
+                        <i class="slidepoint"></i>
+                        <i class="slidepoint"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- seckillb end -->
+        </div>
+        <!-- goodslist end -->
+    </div>
     <script type="text/javascript" src="js/index.js"></script>
 </body>
 
