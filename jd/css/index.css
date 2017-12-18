@@ -42,10 +42,12 @@ body {
     border: 1px solid #ccc;
     background: #fff;
     -webkit-box-shadow: 1px 2px 1px rgba(0, 0, 0, .1);
-            box-shadow: 1px 2px 1px rgba(0, 0, 0, .1);
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, .1);
 }
 
-/*z-index*/
+
+/* z-index */
+
 .sity .mysity {
     z-index: 1;
 }
@@ -68,10 +70,13 @@ body {
 #mycart .content {
     z-index: 1;
 }
+
+
 /*z-index end*/
 
 
 /*sitenav*/
+
 .sitenav {
     position: relative;
     line-height: 28px;
@@ -94,7 +99,10 @@ body {
 .sitenav i {
     color: #999;
 }
+
+
 /*sity */
+
 .sity {
     position: relative;
     display: inline-block;
@@ -161,10 +169,13 @@ body {
 .selected a:hover {
     background: #f10215;
 }
+
+
 /*city end*/
 
 
 /*sitenav menu*/
+
 .sitenav .menu {
     float: right;
     list-style: none;
@@ -192,7 +203,9 @@ body {
     color: #f10215;
 }
 
+
 /*myjd */
+
 #myjd:hover .item {
     padding-bottom: 1px;
     border: 1px solid #ccc;
@@ -221,9 +234,13 @@ body {
 .myjd-list li {
     width: 126px;
 }
+
+
 /*myjd end*/
 
+
 /*serve*/
+
 #serve:hover .item {
     padding-bottom: 1px;
     border: 1px solid #ccc;
@@ -266,9 +283,13 @@ body {
     padding-top: 10px;
     border-top: 1px dotted #ccc;
 }
+
+
 /*serve end*/
 
+
 /*sitemap*/
+
 #sitemap:hover .item {
     padding-bottom: 1px;
     border: 1px solid #ccc;
@@ -315,12 +336,19 @@ body {
 #sitemap .dropdown li {
     width: 80px;
 }
+
+
 /*sitemap end*/
+
+
 /*sitenav menu*/
+
+
 /*sitenav end*/
 
 
 /*header*/
+
 .header {
     height: 140px;
 }
@@ -338,9 +366,12 @@ body {
     background: #fff;
     background: url(../img/logo.v3.jpg);
     -webkit-box-shadow: 0 -10px 10px rgba(0, 0, 0, .2);
-            box-shadow: 0 -10px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, .2);
 }
+
+
 /*search*/
+
 .search {
     position: absolute;
     top: 25px;
@@ -390,10 +421,13 @@ body {
     font-weight: 800;
     color: #fff;
 }
+
+
 /*search end*/
 
 
 /*my cart*/
+
 #mycart {
     position: relative;
     position: absolute;
@@ -457,10 +491,13 @@ body {
     vertical-align: middle;
     background: url(../img/emptycart.png) no-repeat;
 }
+
+
 /*mycart end*/
 
 
 /*sale inf key word*/
+
 .saleinf {
     position: absolute;
     top: 65px;
@@ -471,10 +508,13 @@ body {
 .saleinf .selected {
     color: #f10215;
 }
+
+
 /*saleinf  key word end*/
 
 
 /*header nav */
+
 #headernav {
     position: absolute;
     bottom: 0;
@@ -497,16 +537,24 @@ body {
     margin-top: 15px;
     background: #ccc;
 }
+
+
 /*header nav end*/
+
+
 /*header end*/
 
+
 /*mainnav*/
+
 .mainnav .wrapper {
     position: relative;
     height: 480px;
 }
 
+
 /*lnav*/
+
 .mainnav .lnav {
     float: left;
     width: 190px;
@@ -545,9 +593,13 @@ body {
 .mainnav .lnav a:hover {
     color: #f10215;
 }
+
+
 /*lnav end*/
 
+
 /*middle content*/
+
 .mainnav .bannarbox {
     float: left;
     width: 790px;
@@ -588,7 +640,7 @@ body {
     background: #fff;
 }
 
-.tbanner .indexbox div:not(:last-child) {
+.tbanner .indexbox i:not(:last-child) {
     margin-right: 10px;
 }
 
@@ -609,6 +661,8 @@ body {
     height: 100%;
     background: white;
 }
+
+
 /*middle content end*/
 
 .mainnav .bannarbox .rbanner {
@@ -622,7 +676,9 @@ body {
     background: white;
 }
 
+
 /*rnav*/
+
 .userInf {
     height: 115px;
     border-bottom: 1px solid #e6e6e6;
@@ -643,10 +699,12 @@ body {
     border-radius: 50px;
     background: #ccc;
 }
+
 .userInf .userFace img {
     width: 40px;
     height: 40px;
 }
+
 .userInf .userSign {
     float: left;
     padding-left: 10px;
@@ -676,9 +734,13 @@ body {
     color: #fff;
     background: #f10215;
 }
+
+
 /*userInf end*/
 
+
 /*notice end*/
+
 .notice {
     height: 154px;
     padding: 0 15px;
@@ -719,7 +781,7 @@ body {
     line-height: 24px;
 }
 
-.notice .matter #mannounce{
+.notice .matter #mannounce {
     display: none;
 }
 
@@ -732,6 +794,8 @@ body {
 .notice li:hover {
     color: #f10215;
 }
+
+
 /*notice end */
 
 .serviceTag {
@@ -758,6 +822,7 @@ body {
     display: block;
     margin-top: 14px;
 }
+
 .serviceTag span {
     display: block;
     height: 22px;
@@ -777,6 +842,7 @@ body {
     background-size: 156px 148px;
 }
 
+
 .serviceTag .iphone {
     background-position: 0 -88px;
 }
@@ -792,6 +858,7 @@ body {
 .serviceTag .itrain {
     background-position: -88px -88px;
 }
+
 .serviceTag .icompany {
     background-position: -88px -44px;
 }
@@ -840,17 +907,23 @@ body {
     line-height: 12px;
     color: white;
 }
+
+
 /*mainnav end*/
 
+
 /*secondkill*/
+
 .secondkill {
+    overflow: hidden;
     margin-top: 10px;
+
 }
 
-.secondkill .wrapper {
+/* .secondkill .wrapper {
     height: 100px;
 }
-
+ */
 .secondkill .headbar {
     position: relative;
     height: 55px;
@@ -874,7 +947,8 @@ body {
     height: 28px;
     background-position: -194px -52px;
 }
-.secondkill .lcontent > *{
+
+.secondkill .lcontent>* {
     display: block;
     float: left;
 }
@@ -916,16 +990,18 @@ body {
 }
 /*lcontent end*/
 
+
 /*rcontent*/
 .secondkill .headbar .rcontent {
     float: right;
     font-size: 14px;
 }
 
-.secondkill .rcontent > * {
+.secondkill .rcontent>* {
     float: left;
 }
-.secondkill .rcontent > span {
+
+.secondkill .rcontent>span {
     margin-top: 10px;
     line-height: 45px;
 }
@@ -970,22 +1046,26 @@ body {
 }
 /*timer end*/
 
+
 /*goodslist*/
 .secondkill .seckillb {
+    overflow: hidden;
     height: 225px;
-    padding: 12px 0 13px;
-    background: white;
+    padding: 12px 0px 13px 0px;
+    background: #fff;    
 }
 
 .secondkill .goodslist {
     position: relative;
     float: left;
-    overflow: hidden;
     width: 999px;
 }
+
 .secondkill .goodslist ul {
     width: 6000px;
+   
 }
+
 .secondkill .goods {
     float: left;
     width: 170px;
@@ -993,12 +1073,14 @@ body {
     padding: 0 14px 0 15px;
     color: #999;
     border-right: 1px solid #e7e7e7;
+
 }
 
 .secondkill .img {
     display: block;
     text-align: center;
 }
+
 .secondkill .goods img {
     width: 130px;
     height: 130px;
@@ -1006,6 +1088,7 @@ body {
     transition: .4s ease;
     background: green;
 }
+
 .secondkill .goods img:hover {
     transform: translateY(-5px);
 }
@@ -1026,13 +1109,16 @@ body {
 .secondkill .original {
     font-size: 12px;
 }
-.secondkill .i{
+
+.secondkill .i {
     margin-right: 3px;
     font-family: arial;
     font-size: 12px;
 }
 
+
 /*slidebtn*/
+
 .slidebtn {
     position: absolute;
     top: 50%;
@@ -1042,7 +1128,7 @@ body {
     line-height: 54px;
     transform: translateY(-50%);
     text-align: center;
-    background: rgba(0,0,0,.1);
+    background: rgba(0, 0, 0, .1);
 }
 
 #slideleft {
@@ -1066,8 +1152,9 @@ body {
     opacity: .7;
     color: #272526;
 }
-/*slidebtn end*/
 
+
+/*slidebtn end*/
 .secondkill .slideshow {
     position: relative;
     float: right;
@@ -1075,25 +1162,335 @@ body {
     width: 180px;
     height: 100%;
     margin-right: 10px;
-    background: yellow;
 }
 
-.secondkill .slideshow a {
+.secondkill .slideshow li {
     position: absolute;
+    z-index: 0;
 }
-
 
 .secondkill .slideshow .pointBox {
     position: absolute;
+    z-index: 3;
     bottom: 0;
     left: 50%;
     margin-bottom: 5%;
     transform: translateX(-50%);
 }
+
 .secondkill .slideshow .pointBox i {
     width: 10px;
     height: 10px;
     margin: 0 3px;
     border-radius: 5px;
     background: #342a2d;
+}
+/* secondkill end */
+
+/* grid o-1 */
+.grid-1.o-1 {
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.grid-1 .colum {
+    float: left;
+    overflow: hidden;  width: 390px;
+    height: 444px; background: white;   
+    }
+
+.grid-1 .colum:not(:last-child) {
+    margin-right: 10px;
+}
+
+.grid-1 .colum-header {
+    position: relative;
+    height: 55px;
+    padding: 0 20px 0 30px;
+    color: #fff;
+    background: #4998a1;
+}
+
+.grid-1 .colum-header i.corner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 28px;
+    background: url(../img/seckillbartag.png);
+}
+
+.grid-1 .colum-header i.corner-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 19px solid #f6f6f6;
+    border-right: 19px solid rgba(0,0,0,0);
+}
+
+.grid-1 .colum-header .title {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 24px;
+}
+
+.grid-1 .colum-header .subtitle {
+    float: right;  font-size: 14px;  line-height: 55px;
+    }
+
+.grid-1 .colum-header .subtitle a {
+    color: #fff;
+}
+
+.grid-1 .colum-header .r-arrow {
+    width: 20px;
+    height: 19px;
+    vertical-align: middle;
+    background: url(../img/seckillbartag.png);
+    background-position: -154px -40px;
+}
+
+.grid-1 .ord-1 i.corner {
+    background-position: -194px -100px;
+}
+.grid-1 .ord-2 .colum-header {
+    background: #76488e;
+}
+
+.grid-1 .ord-3 .colum-header {
+  background: #e77005;
+}
+
+.grid-1 .ord-2 i.corner {
+    background-position: -4px -164px;
+}
+
+.grid-1 .ord-3 i.corner {
+    background-position: -194px -4px;
+}
+
+/* .grid-1 .colum-header end */
+
+.grid-1 .body {
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.grid-1 .ord-1 .body-wrapper {
+    overflow: hidden;
+    height: 500px;
+}
+
+.grid-1 .ord-1 .body ul {
+    margin-top: -1px;
+    margin-left: -1px;
+}
+
+.grid-1 .ord-1 .body .cell {
+    position: relative;
+    float: left;
+    width: 184px;
+    height: 121px;
+    font-size: 0;
+    border-top: 1px solid #e7e7e7;
+    border-left: 1px solid #e7e7e7;
+}
+
+.grid-1 .ord-1 .cell-title {
+    display: inline-block;
+    width: 50px;
+    width: 80px;
+    margin-top: 15px;
+    margin-left:  20px;
+    font-size: 14px;
+    line-height: 20px;
+    vertical-align: top;
+}
+
+.grid-1 .ord-1 .cell img {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    width: 80px;
+    height: 80px;
+    transition: .4s ease;
+}
+.grid-1 .ord-1 .cell img:hover {
+    transform: translateX(-5px);
+}
+
+.grid-1 .ord-2 .body {
+    height: 360px;
+}
+.grid-1 .ord-2 .slideBox {
+    position: relative;
+}
+.grid-1 .ord-2 .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+
+.grid-1 .ord-2 .slide .line {
+    width: 360px;
+    height: 141px;
+    height: 141px;
+    margin: 0 5px 18px;
+    margin-left: 2px;
+    padding-top: 18px;
+}
+
+.grid-1 .ord-2 .slide span {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+    text-indent: 10px;
+    color: #666;
+}
+
+.grid-1 .ord-2 .slide a {
+    float: left;
+    overflow: hidden;
+    width: 110px;
+    height: 112px;
+    margin: 0 5px;
+}
+.grid-1 .ord-2 .slide .line:last-child {
+    border-top: 1px solid  #e7e7e7;
+}
+
+.grid-1 .ord-2 .dotBox {
+    position: absolute;
+    bottom:  0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.grid-1 .ord-2 .dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 7px;
+    border-radius: 6px;
+    background: #c8c8c8;
+}
+/* grid-1 .ord-2 end */
+
+/* .grid-1 .ord-3 */
+.grid-1 .ord-3 .body {
+    padding: 0;
+    padding-top: 6px;
+}
+
+.grid-1 .ord-3 .body-nav {
+    position: relative;
+}
+
+.grid-1 .ord-3 .body-nav li {
+    display: inline-block;
+    width: 73px;
+    height: 18px;
+    margin-bottom: 7px;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.grid-1 .ord-3 .body-nav li:not(:last-child) {
+    border-right: 1px solid #d2d1d1;
+}
+
+.grid-1 .ord-3 .body-nav .slip {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 50px;
+    height: 2px;
+    background: red;
+}
+.grid-1 .ord-3 .cellBox {
+    overflow: hidden;
+    margin-right: 9px;
+    margin-left: 9px;
+    padding-top: 10px;
+    border-top: 1px solid #d2d1d1;
+}
+
+.grid-1 .ord-3 .cellBox .cell {
+    position: relative;
+    display: block;
+    float: left;
+    width: 123px;
+    height: 142px;
+    padding: 12px 0;
+    text-align: center;
+    border-top: 1px solid #d2d1d1;
+    border-left: 1px solid #d2d1d1;
+}
+.grid-1 .ord-3 .cellBox .cl-top {
+   border-top: 0; 
+}
+
+.grid-1 .ord-3 .cellBox .cl-left {
+   border-left: 0; 
+}
+
+.grid-1 .ord-3 .cellBox img {
+    width: 100px;
+    height: 100px; 
+}
+
+.grid-1 .ord-3 .cellBox i {
+    position: absolute;
+
+}
+
+.grid-1 .ord-3 .cell p {
+    overflow: hidden;    
+    height: 32px;
+    padding: 0 11px;
+    line-height: 16px;
+    text-align: left;
+}
+
+.grid-1 .ord-3 i[class|="flag"] {
+    top: 12px;
+    left: 12px;    
+    width: 30px;
+    height: 40px;
+    background: url(../img/seckillbartag.png) no-repeat;
+    background-position: -104px -40px;
+    background-size: 218px 188px;
+}
+
+.grid-1 .ord-3 i.flag-2 {
+    background-position: -50px -100px;
+}
+
+.grid-1 .ord-3 i.flag-3 {
+    background-position: 0 -100px;
+}
+
+.grid-1 .ord-3 i.flag-4 {
+    background-position: -100px -100px;
+}
+
+.grid-1 .ord-3 i.flag-5 {
+    background-position: -100px -100px;
+}
+
+.grid-1 .ord-3 i.flag-6 {
+    background-position: -100px -100px;
+}
+
+.grid-1 .ord-3 i.num {
+    top: 16px;
+    left: 22px;  
+    font-size: 18px;
+    color: #fff;
 }
