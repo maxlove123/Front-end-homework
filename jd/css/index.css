@@ -1451,22 +1451,20 @@ body {
 }
 
 .grid-1 .ord-3 .cell p {
-    overflow: hidden;    
-    height: 32px;
+    overflow: hidden;        height: 32px;
     padding: 0 11px;
     line-height: 16px;
     text-align: left;
-}
+    }
 
 .grid-1 .ord-3 i[class|="flag"] {
     top: 12px;
-    left: 12px;    
-    width: 30px;
+    left: 12px;        width: 30px;
     height: 40px;
     background: url(../img/seckillbartag.png) no-repeat;
     background-position: -104px -40px;
     background-size: 218px 188px;
-}
+    }
 
 .grid-1 .ord-3 i.flag-2 {
     background-position: -50px -100px;
@@ -1490,7 +1488,358 @@ body {
 
 .grid-1 .ord-3 i.num {
     top: 16px;
-    left: 22px;  
-    font-size: 18px;
+    left: 22px;    font-size: 18px;
     color: #fff;
+    }
+
+.dot-header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 26px;
+    text-align: center;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAADCAMAAAB/P3U+AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkJEODlEQkUxNzk2NjExRTY5OTdDQkQ2NDRFQjFCNUU1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkJEODlEQkUyNzk2NjExRTY5OTdDQkQ2NDRFQjFCNUU1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QkQ4OURCREY3OTY2MTFFNjk5N0NCRDY0NEVCMUI1RTUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QkQ4OURCRTA3OTY2MTFFNjk5N0NCRDY0NEVCMUI1RTUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7GI6sZAAAAD1BMVEXa2trExMTBwcHDw8P///8QPEuGAAAABXRSTlP/////APu2DlMAAAAZSURBVHjaYmBgZGCBAwZmJkYkHoocQIABAAogAIEAYnZPAAAAAElFTkSuQmCC") repeat-x 0 18px;
+}
+
+.dot-header span {
+    padding: 0 40px;
+    background-color: #f6f6f6;
+}
+
+.enjoy-life .wrapper>ul {
+    overflow: hidden;
+    margin-left: -10px;
+}
+
+.enjoy-life .guideBox li {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 390px;
+    height: 170px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.enjoy-life .guideBox .video {
+    position: relative;
+    float: right;
+    height: 350px;
+    background: yellow;
+}
+
+.enjoy-life .video .title {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    color: #fff;
+    background: rgba(0,0,0,.57);
+}
+
+.enjoy-life .video .title h4 {
+    display: inline-block;
+    margin-left: 24px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.enjoy-life .video .title span {
+    float: right;
+    margin-right: 24px;
+    font-size: 14px;
+}
+
+.enjoy-life .video .title i.right {
+    width: 15px;
+    height: 16px;
+    margin-top:  -2px;
+    margin-left: 4px;
+    vertical-align: middle;
+    background: url(../img/sprite_entrylive@1x.png) no-repeat;
+    background-position: -205px -128px;
+    background-size: 237px 170px;
+}
+
+.enjoy-life .guideBox .video li {
+    margin-left: 0;
+}
+
+.enjoy-life .video .shade {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 390px;
+    height: 350px;
+    background: rgba(0,0,0,.57);
+}
+
+.enjoy-life .video .shade i.play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 66px;
+    height: 68px;
+    transform: translate(-50%,-50%);
+    background: url(../img/sprite_entrylive@1x.png) no-repeat; 
+    background-position: 0 -104px;      
+    background-size: 237px 170px;
+}
+
+.enjoy-life .video .slideBox {
+    overflow: hidden;
+}
+
+.enjoy-life .slideBox li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 350px;
+}
+.enjoy-life .slideBox img {
+    height: 350px;
+    margin-left: -38px;   
+}
+
+.enjoy-life .guide.small {
+    width: 190px;
+}
+
+.enjoy-life .guide .title {
+    width: 100px;
+    height: 100%;
+    padding: 45px 20px;
+    opacity: 0.9;
+    color: #fff;
+    background: yellow;
+}
+
+.enjoy-life .guide.small .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 60px;
+    padding: 10px 45px;
+}
+
+.enjoy-life .guide h4 {
+    height: 40px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: center;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.enjoy-life .guide.small h4 {
+    height: 32px;
+    font-size: 16px;
+    line-height: 34px;
+}
+
+.enjoy-life .guide p {
+    overflow: hidden;
+    height: 32px;
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.enjoy-life .guide.small p {
+    text-align: center;
+}
+
+.enjoy-life .guide img {
+    position: absolute; z-index: -1;
+    top: 0;
+    left: 0; 
+    width: 400px;
+    transition: 0.3s ease-in;
+}
+
+.enjoy-life .guide:hover img {
+    margin-left: -10px;
+}
+
+.enjoy-life .guide.small img {
+    width: 200px;
+}
+
+/* enjoy-life end */
+.more-goods {
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.more-goods ul {
+    margin-right: -10px;
+}
+.more-goods li {
+    float: left;
+    overflow: hidden;
+    width: 220px;
+    height: 305px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 4px;
+    text-align: center;
+    border: 1px solid #fff;
+    background-color: #fff;
+
+}
+.more-goods li:hover {
+    border-color: #f10214;
+}
+
+.more-goods li:hover .title {
+    color: #f10214;
+}
+
+.more-goods a {
+    display: block;
+    color: #666;
+}
+
+.more-goods .goods-inf {
+     margin: 10px;
+    text-align: left;
+
+}
+.more-goods .title {  display: block; 
+    overflow: hidden;  
+    height: 36px;
+    }
+
+.more-goods .price {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #f10214;
+}
+
+/* .more-goods end */
+
+.footer {
+    overflow: hidden;
+    background-color: #eaeaea;
+}
+
+.footer .jd-service {
+    overflow: hidden;
+    padding: 30px 0;
+    vertical-align: middle;
+}
+
+.footer .jd-service span {
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.footer .jd-service li {
+    float: left;
+    width: 252px;
+    padding-left: 45px;
+    font-weight: 700;
+
+}
+
+.footer .jd-service i {
+    width: 36px;
+    height: 42px;
+    margin-right: 4px;
+    vertical-align: middle;
+    background: url(../img/ico_service.png) no-repeat;
+}
+
+.footer .jd-service i.more {
+    background-position: 0 0;
+}
+.footer .jd-service i.speed {
+    background-position: 0 -43px;
+}
+.footer .jd-service i.good {
+    background-position: 0 -86px;
+}
+.footer .jd-service i.save {
+    background-position: 0 -129px;
+}
+
+.footer .jd-helper {
+    overflow: hidden;
+    padding: 20px 0;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
+.footer .jd-helper .guide {
+    float: left;
+    overflow: hidden;
+    width: 198px;
+    line-height: 22px;
+}
+
+.footer .jd-helper span {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.footer .jd-helper a {
+    color: #666;
+}
+
+.footer .jd-helper a:hover {
+    color: #f10214;
+}
+
+.footer .jd-helper .jd-area {
+    float: right;
+    width: 200px;
+    height: 150px;
+    background:  url(../img/ico_footer.png);
+}
+.footer .jd-helper .jd-area h5 {
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+.footer .jd-helper .jd-area a {
+    display: block;
+    text-align: right;
+}
+.footer .jd-helper .jd-area p {
+    width: 180px;
+}
+
+.footer .jd-coperight {
+    padding: 15px 0;
+/*     text-align: center; */
+}
+.footer .jd-coperight>div {
+    overflow: hidden;
+    text-align: center;
+}
+
+.footer .jd-coperight .pipe {
+    width: 1px;
+    height: 12px;
+    margin: 0 4px;
+    margin-top: 4px;
+    font-weight: 400;
+    color: #ccc;
+}
+
+.footer .jd-coperight a {
+    color: #666;
+}
+
+.footer .jd-coperight .info {
+    margin: 10px 0;
+    line-height: 22px;
+}
+.footer .jd-coperight .info a {
+    color: #999;   
 }
