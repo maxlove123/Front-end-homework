@@ -1,0 +1,270 @@
+/*sitenav*/
+.sitenav {
+    position: relative;
+    line-height: 28px;
+    background: #e1e2e4;
+    .wrapper {
+        height: 30px;
+    }
+    .dropdown {
+        display: none;
+        border: 1px solid #ccc;
+        background: #fff;
+        -webkit-box-shadow: 1px 2px 1px rgba(0, 0, 0, .1);
+        box-shadow: 1px 2px 1px rgba(0, 0, 0, .1);
+    }
+}
+
+.sitenav,
+.sitenav a,
+.sitenav i {
+    color: #999;
+}
+
+.sitenav-pipe {
+    width: 1px;
+    height: 10px;
+    margin: 0 5px;
+    background: #ccc;
+}
+
+/*sity */
+.sitenav .sity {
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+    float: left;
+    margin-left: 200px;
+    list-style-type: none;
+
+    .mysity {
+        position: relative;
+        z-index: 1;
+        width: 60px;
+        height: 29px;
+        cursor: pointer;
+        text-align: center;
+        border: 1px solid #e1e2e4;
+        border-bottom: 0;
+        .icon-zuobiao {
+            font-size: 14px;
+            color: $jd-red;
+        }
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        display: none;
+        width: 300px;
+        height: 196px;
+        padding: 10px;
+
+        li {
+            float: left;
+            width: 60px;
+            padding: 2px 0;
+            line-height: 24px;
+        }
+
+        .selected a {
+            color: #fff;
+            background: $jd-red;
+            &:hover {
+                background: $jd-red;
+            }
+        }
+
+        a {
+            padding: 4px 8px;
+            &:hover {
+                background: #f4f4f4;
+            }
+        }
+    }
+
+    &:hover {
+        .mysity {
+            padding-bottom: 1px;
+            border: 1px solid #ccc;
+            border-bottom: 0;
+            background: #fff;
+        }   
+
+        .dropdown {
+            display: block;
+        } 
+    }
+}
+/*city end*/
+
+/*menu*/
+.sitenav .menu {
+    float: right;
+    list-style: none;
+    cursor: pointer;
+
+    .signup a {
+        color: $jd-red;
+    }
+
+    li {
+        position: relative;
+        z-index: 10;
+        display: inline-block;
+        list-style-type: none;
+    }    
+
+    .item {
+        position: relative;
+        z-index: 1;
+        height: 29px;
+        padding: 0 5px;
+        border: 1px solid #e1e2e4;
+        border-bottom: 0;
+    }
+
+    .iconfont {
+        margin-left: -4px;
+    }
+}
+/*menu end*/
+
+/*myjd */
+#myjd {
+    li {
+        width: 126px;
+    }    
+
+    .dropdown {
+        position: absolute;
+        top: 30px;
+        display: none;
+        width: 280px;
+
+        .myjd-list {
+            padding: 10px 0 10px 15px;
+            line-height: 24px;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+
+    &:hover {
+        .item {
+            padding-bottom: 1px;
+            border: 1px solid #ccc;
+            border-bottom: 0;
+            background: #fff;
+        }
+
+        .dropdown {
+            display: block;
+        }
+    }
+}
+/*myjd end*/
+
+/*serve*/
+#serve {
+    .dropdown {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        display: none;
+        width: 170px;
+        padding: 10px 0;
+
+        div {
+            padding-left: 15px;
+            font-weight: 800;
+            line-height: 20px;
+            color: #111;
+        }
+    }
+
+    .title2 {
+        padding-top: 10px;
+        border-top: 1px dotted #ccc;
+    }
+
+    .list {
+        padding-bottom: 10px;
+        line-height: 26px;  
+
+        li {
+            width: 65px;
+            margin-top: -4px;
+            padding-left: 15px;
+        }   
+    }
+
+    &:hover {
+        .item {
+            padding-bottom: 1px;
+            border: 1px solid #ccc;
+            border-bottom: 0;
+            background: #fff;
+        }
+
+        .dropdown {
+            display: block;
+        }
+    }
+}
+/*serve end*/
+
+/*sitemap*/
+#sitemap {
+    .dropdown {
+        position: absolute;
+        top: 30px;
+        right: -79px;
+        width: 1188px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        dl {
+            float: left;
+            width: 255px;
+            padding-left: 20px;
+
+            &:not(:last-child) {
+                border-right: 1px solid #ccc;
+            }
+        }
+
+        .list {
+            width: 340px;
+        }
+
+        dt {
+            font-weight: 800;
+            color: #111;
+        }
+
+        ul {
+            line-height: 24px;
+
+            li {
+                width: 80px;
+            }
+        }
+    }
+
+    &:hover {
+        .item {
+            padding-bottom: 1px;
+            border: 1px solid #ccc;
+            border-bottom: 0;
+            background: #fff;
+        }
+
+        .dropdown {
+            display: block;
+        }
+    }
+}
+/*sitemap end*/
+/*sitenav menu end*/
+/*sitenav end*/

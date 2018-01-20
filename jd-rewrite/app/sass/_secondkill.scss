@@ -1,0 +1,227 @@
+.secondkill {
+    .wrapper {
+        height: 275px;
+        margin-bottom: 30px;
+        background: #fff;
+    }  
+}
+
+.secondkill .sek-info {
+    position: relative;
+    float: left;
+    width: 190px;
+    height: 100%;
+    background-color: #e83632;
+    h3 {
+        position: absolute;
+        top: 42px;
+        width: 100%;
+        font-size: 34px;
+        text-align: center;
+        color: #fff;
+    }
+    h4 {
+        position: absolute;
+        top: 90px;
+        left:0;
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    i.icon-lighting {
+        position: absolute;
+        top: 126px;
+        left: 86px;
+        width: 20px;
+        height: 33px;
+        background: url(../img/icon/sprite.seckill.png) no-repeat;
+        background-position: -35px -25px;
+    }
+    p {
+        position: absolute;
+        top: 170px;
+        width: 100%;
+        font-size: 16px;
+        text-align: center;
+        color: #fff;
+    }
+    .countdown {
+        position:absolute;
+        top: 212px;
+        left: 30px;
+        height:40px;
+        div {
+            position:relative;
+            z-index: 1;
+            float:left;
+            width: 40px;
+            height: 40px;
+            margin-right: 5px;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+            background-color: #2f3430;
+            span {
+                position: relative;
+            }
+            &:before {
+                position: absolute;
+                top: 50%;
+                display: block;
+                width: 40px;
+                height: 1px;
+                content: "";
+                background-color: #e83632;
+            }
+        }
+    }
+}
+
+.secondkill .sek-list {
+    position: relative;
+    float: left;
+    width: 799px;
+    height: 100%;
+    border-right: 1px solid #f0f0f0;
+}
+
+.secondkill .sek-list .sek-goods {
+
+    .slideshow {
+        overflow: hidden;
+        .slides {
+           width: 5000px;
+           height: 275px;
+           position:relative;
+       }
+       .slideshow-controls {
+            @include slideshow-controls;
+       }
+    }
+    .slide {
+        float: left;
+        height: 100%;
+    }
+    li.slide-item {
+        position: relative;
+        float: left;
+        width: 200px;
+        height: 275px;
+        a {
+            overflow: hidden;
+            position: relative;
+            margin: 0 5px;
+            width: 180px;
+            height: 275px;
+            display: block;
+        }
+        i.icon-flage {
+            z-index: 10;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 40px;
+            text-align: center;
+            line-height: 16px;
+            color: #fff;
+            background: url(../img/icon/sprite.seckill.png) no-repeat;
+            background-position: 0px -26px;
+        }
+        .good-img {
+            width: 140px;
+            height: 140px;
+            margin: 20px auto 18px;
+        }
+        .title {
+            overflow: hidden;
+            width: 160px;
+            margin: 0 auto;
+            margin-bottom: 16px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            &:hover {
+                color: #e6382f;
+            }
+        }
+        .price {
+            overflow: hidden;
+            width: 162px;
+            margin: 0 auto;
+            background: #e6382f;
+            div {
+                float: left;
+                width: 80px;
+                height: 20px;
+                text-align: center;
+            }
+            .current {
+                font-size: 14px;
+                font-weight: 700;
+                color: #fff;
+                i {
+                    font-size: 12px;
+                }
+            }
+            .origin {
+                border:1px solid #e6382f;
+                background: #fff;
+            }
+        }
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            width: 1px;
+            height: 100%;
+            content: "";
+            background: #f0f0f0;
+        }
+    }
+}
+
+.secondkill .banner-w {
+    position: relative;  
+    float:left;
+    width: 180px;
+    height: 260px;
+    padding: 8px 10px 7px;
+
+    
+    .slide-show {
+        position: relative;
+        // overflow: hidden;
+        height: 100%;
+        .slide-box {
+            li {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+        .dots-box {
+            position: absolute;
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            li {
+                float: left;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background:#c0c0c0;
+                &:hover {
+                    background: #e33333;
+                }
+                &:not(last-child) {
+                    margin-right: 6px;
+                }
+            }
+        }
+    } 
+}

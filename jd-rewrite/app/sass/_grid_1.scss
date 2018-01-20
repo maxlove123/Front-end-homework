@@ -1,0 +1,429 @@
+.grid_1 {
+    margin-bottom: 30px;
+    .wrapper {
+        height: 480px;
+    }
+}
+
+.grid_1 .lnav {
+    float: left;
+    width: 190px;
+    height: 100%;
+    margin-right: 10px;
+    background: #fefefe;
+    ul {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    li {
+
+        height: 28px;
+        padding-left: 18px;
+        font-size: 0;
+        line-height: 28px;
+        user-select: none;
+        &:hover {
+            background: #d9d9d9;
+        }
+    }
+    span {
+        padding: 0 2px;
+        font-size: 12px;
+        cursor: default;
+        color: #636363;
+    }
+    a {
+        font-size: 14px;
+        color: #626262;
+        &:hover {
+            color: $jd-red;
+        }
+    }
+}
+
+.grid_1 .bannarbox {
+    float: left;
+    width: 790px;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.grid_1 .bannarbox .l-banner {   
+    float:left;
+    display: block;
+    width: 590px;
+    height: 470px;
+    margin-right: 10px;
+    .slideshow {
+        width: 100%;
+        height:100%;
+    }
+    .slides li {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    .dots {
+        position: absolute;
+        z-index: 10;
+        bottom: 20px;
+        left: 46px;
+        li {
+            float: left;
+            width: 18px;
+            height: 18px;
+            transition: .2s ease;
+            text-align:center;
+            border-radius: 9px;
+            i {
+                width: 6px;
+                height: 6px;
+                margin-top: 4px;
+                border: 2px solid rgba(255, 255, 255, 0.2);
+                border-radius: 6px;
+                
+            }
+            &.focus, &:hover {
+                background: rgba(255, 255, 255, 0.2);
+                i {
+                    border-color: #fff;
+                    background: #fff;
+                }
+                
+            }
+        }
+    }
+    .slideshow-controls {
+        @include slideshow-controls;
+    }
+}
+
+.grid_1 .bannarbox .r-banner {
+    overflow: hidden;
+    width: 190px;
+    height: 470px;
+    .banner {
+        width:190px;
+        height:150px;
+        margin-bottom: 10px;
+    }
+}
+
+.grid_1 .rnav {
+    float: right;
+    width: 190px;
+    height: 470px;
+    // height: 100%;
+    margin-top: 10px;
+    background: white;
+}
+
+.grid_1 .rnav .userInf {
+    height: 170px;
+    margin: 0 auto;
+    .user-face {
+        position: relative;
+        margin-top:-10px;
+        margin-bottom:14px;
+        img {
+            display: block;
+            width: 65px;
+            height: 65px;
+            margin: 0 auto;
+            border-radius: 50%;
+        }
+        a {
+            position: absolute;
+            top: -17px;
+            left: 50%;
+            overflow: hidden; width: 106px;
+            height: 108px;
+            transform: translateX(-50%);
+            background: url(../img/icon/sprite.user.png) no-repeat;
+            background-position: 4px 0px; 
+            }
+    }
+    .userSign {
+        height: 40px;
+        margin-bottom: 10px;
+        text-align: center;
+        a:hover {
+            color: $jd-red;
+        }
+    }
+    .userPrefit {
+        font-size: 0;
+        text-align: center;
+        a {
+            display: inline-block;
+            width: 70px;
+            height: 25px;
+            margin: 0 5px;
+            font-size: 12px;
+            line-height: 25px;
+            text-align: center;
+            color: $jd-red;
+            border-radius: 13px;
+            box-shadow:4px 6px 12px 2px rgba(45,45,45,.15);
+            &:hover {
+                color: #fff;
+                background: $jd-red;
+            }
+        }
+        .black {
+            color: #e5d790;
+            background: #363634;
+        }
+    }
+}
+
+.grid_1 .rnav .notice {
+    overflow: hidden;
+    height: 154px;
+    height: 133px;
+    padding: 17px 15px 0;
+    cursor: pointer;
+    .title {
+        position: relative;
+        padding: 8px 0 4px;
+        line-height: 14px;
+        .pipe {
+            position: absolute;
+            bottom: 0;
+            width: 28px;
+            height: 2px;
+            transition: transform .3s ease;
+            background: $jd-red;
+        }
+        #onsalebtn {
+            padding-right: 12px;
+            border-right: 1px solid #dfe0e1;
+        }
+        #announcebtn {
+            padding-left: 12px;
+        }
+        #more {
+            float: right;
+        }
+    }
+    .matter {
+        padding: 12px 0;
+        line-height: 22px;
+         #mannounce {
+            display: none;
+        }
+        li {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            &:hover {
+                color: $jd-red;
+            }
+        }
+    }
+}
+
+.serviceTag {
+    overflow: hidden;
+    height: 160px;
+    padding:10px 15px 15px;
+    .tag {
+        li {
+            position: relative;
+            float: left;
+            overflow: hidden;
+            width: 40px;
+            height: 45px;
+            text-align: center;
+            i {
+                display: block;
+                width: 24px;
+                height: 24px;
+                margin: 16px auto 36px;
+                transition: 0.2s ease;
+                background: url(../img/icon/sprite.service.png) no-repeat;
+            }
+            a {
+                display: block;
+            }
+            span:not(.icon-cornerdes) {
+                display: block;
+                height: 25px;
+                line-height: 25px;
+                color: #fff;
+                border-radius: 5px;
+                background: #bea68d;
+            }
+            &:hover {
+                i {
+                    margin-top: -45px;
+                }
+            }
+        }
+    }
+}
+
+
+.serviceTag .tag .icon-phone {
+         background-position: -145px -42px;
+}
+
+.serviceTag  .tag .icon-fly {
+        background-position: -29px -42px;
+}
+
+.serviceTag .tag .icon-hotel {
+    background-position: -174px -42px;
+}
+
+.serviceTag .tag .icon-train {
+    background-position: -87px -42px;
+}
+
+.serviceTag .tag .icon-company {
+    background-position: -116px -42px;
+}
+
+.serviceTag .tag .icon-oil {
+    background-position: -116px -71px;
+}
+
+.serviceTag .tag .icon-movie {
+    background-position: -58px -42px;
+}
+
+.serviceTag .tag .icon-game {
+    background-position: 0 -71px;
+}
+
+.serviceTag .tag .icon-people {
+    background-position: -29px -71px;
+}
+
+.serviceTag .tag .icon-money {
+    background-position: -58px -71px;
+}
+
+.serviceTag .tag .icon-giftcard {
+    background-position: -87px -71px;
+}
+
+.serviceTag .tag .icon-chit {
+    background-position: 0 -42px;
+}
+
+.serviceTag .tag .icon-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 16px;
+    margin: 0;
+    background: url(../img/icon/corner.png) no-repeat;
+    background-size: 12px 16px;
+}
+
+.serviceTag .tag .icon-cornerdes {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 12px;
+    color: #fff;
+
+}
+
+.serviceTag .info {
+    width: 100%;
+    height: 180px;
+    margin-top: 200px;
+    background-color: #fff;
+    
+    .nav {
+        overflow: hidden;
+        margin-bottom: 5px;
+        ul {
+            display: inline;
+        }
+        ul li {
+            display: inline;
+            float:left;
+            overflow: auto;
+            margin-right: 10px;
+            text-wrap: nowrap;
+            border: 0;
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+        a {
+            font-size: 12px;
+            text-align: left;
+            
+        }
+    }
+}
+
+.serviceTag .option {
+    overflow: hidden;
+    .option-1 {
+        p {
+            margin-bottom: 10px;
+        }
+        .flight-type {
+            
+            input, label {
+                margin-right: 8px;
+            }
+            input {
+                vertical-align: middle;
+            }
+        }
+        .sity {
+            position: relative;
+            margin-bottom: 12px;
+            div {
+                margin-bottom: -2px;
+                input {
+                    width: 120px;
+                    height: 18px;
+                    text-align: center;
+                    border:1px solid #999;
+                }
+                label {
+                    width: 30px;
+                }
+            }
+            .reverse-sity {
+                position: absolute;
+                top: 10px;
+                right: 2px;
+                width: 18px;
+                height:18px;
+                border: 0;
+                border-radius: 50%;
+                outline: 0;
+                background: url(../img/icon/change-city.png) no-repeat;
+            }
+        }
+        .date {
+            input {
+                width: 120px;
+                height: 18px;
+                text-align: center;
+                border:1px solid #999;
+            }
+        }
+        .search {
+            .ticket-search {
+                padding: 2px 4px 4px 4px;
+                color: #fff;
+                border-radius: 16px;
+                background-color: $jd-red;
+            }
+            .sale-info {
+                color: #55f;
+            }
+        }
+    }
+}
