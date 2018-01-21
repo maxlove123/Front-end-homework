@@ -1,0 +1,41 @@
+#st-special {
+    .wrapper {
+    }
+    .st-body {
+        width: 100%;
+        height: 385px;
+        .slideshow {
+            .slides-w {
+                width: 100%; 
+                background-color: #fff;
+                .slides {
+                    width: 8000px;
+                    height: 330px;
+                    margin-right: 10px;
+                    .slide {
+                        float: left;
+                    }
+                }
+            }
+            .dots {
+                bottom: -30px;
+                @include dots;
+            }
+            .slideshow-controls {
+                @include slideshow-controls;
+            }
+        }
+    }
+}
+
+#st-special .slideshow .third-box.slide-item {
+    width: 390px;
+    height: 330px;
+    margin-right: 10px;
+    .pic {
+        overflow: hidden;
+        width: 350px;
+        height: 250px;
+        margin: 0 auto;
+    }
+}

@@ -1,6 +1,4 @@
-
 var SlideShow = function(slideshowEle, animType, isRun) {
-    
     this.index = 0;
     this.isRun = isRun !== undefined ? isRun : true;
     this.isPause = false;
@@ -34,6 +32,7 @@ var SlideShow = function(slideshowEle, animType, isRun) {
     this.run();
 };
 
+
 SlideShow.prototype.init = function() {
     this[this.animType]();
 
@@ -46,11 +45,11 @@ SlideShow.prototype.init = function() {
         _this.isPause = false;
     });
 
-    this.prevBtn.addEventListener('click', function(){
+    this.prevBtn.addEventListener('click', function() {
         _this.setFocus(_this.index - 1);
     });
 
-    this.nextBtn.addEventListener('click', function(){
+    this.nextBtn.addEventListener('click', function() {
         _this.setFocus();
     });
 
@@ -62,8 +61,30 @@ SlideShow.prototype.init = function() {
             if (index != _this.index) {
                 _this.setFocus(index);
             }
-        });   
+        });
     }
+};
+
+SlideShow.prototype.style = {
+    fadein: [
+        '.fadein {animation: fadein 0.4s;}',
+        '@keyframes fadein {',
+        'from {opacity: 0;}',
+        'to {opacity: 1;}',
+        '}'
+    ].join(''),
+    roll: [
+        '.roll{',
+        'transition: 0.6s ease;',
+        'position: relative',
+        '}',
+    ].join(''),
+};
+
+SlideShow.prototype.addStyle = function() {
+    var style = document.createElement('style');
+    style.innerHTML = this.style[this.animType];
+    document.head.appendChild(style);
 };
 
 SlideShow.prototype.run = function() {
@@ -75,33 +96,13 @@ SlideShow.prototype.run = function() {
     }, 2000);
 };
 
-SlideShow.prototype.style = {
-    fadein: [
-        '.fadein {animation: fadein 0.4s;}',
-        '@keyframes fadein {',
-            'from {opacity: 0;}',
-            'to {opacity: 1;}',
-        '}'
-        ].join(''),
-    roll: [
-        '.roll{',
-            'transition: 0.2s ease-out;',
-            'position: relative',
-        '}',
-        ].join(''),
+
+
+SlideShow.prototype.setFocus = function(index) {
+    this[this.animType].setFocus.call(this, index);
 };
 
-SlideShow.prototype.addStyle = function(){
-    var style = document.createElement('style');
-    style.innerHTML = this.style[this.animType];
-    document.head.appendChild(style);
-};
-
-SlideShow.prototype.setFocus = function(index){
-    this[this.animType].setFocus.call(this,index);
-};
-
-SlideShow.prototype.roll = function(){
+SlideShow.prototype.roll = function() {
     var endSlide = this.slides[0].cloneNode(true);
     // endSlide.style.background = 'green';
     this.slidesEle.append(endSlide);
@@ -109,6 +110,9 @@ SlideShow.prototype.roll = function(){
 };
 
 SlideShow.prototype.roll.setFocus = function(slideIndex) {
+    function getTranVal(dis) {
+        return 'translate3d(' + dis + 'px, 0px, 0px)';
+    };
     this.cleanClassTag();
 
     var currIndex;
@@ -120,25 +124,34 @@ SlideShow.prototype.roll.setFocus = function(slideIndex) {
 
     var slidesLen = this.slides.length;
     var slideWidth = this.slides[0].clientWidth;
-    if (currIndex === -1){
+    if (currIndex === -1) {
         this.slidesEle.style.transitionProperty = 'none';
-        this.slidesEle.style.left = -(slidesLen - 1) * slideWidth + 'px';
+        //this.slidesEle.style.left = -(slidesLen - 1) * slideWidth + 'px';
+        this.slidesEle.style.transform = getTranVal(-(slidesLen - 1) * slideWidth);
         this.slidesEle.style.display = document.defaultView.getComputedStyle(this.slidesEle)['display'];
-        this.slidesEle.style.transitionProperty = 'all';  
+        this.slidesEle.style.transitionProperty = 'all';
         currIndex = (slidesLen - 1) - 1;
-    } else if(currIndex === slidesLen) {    
+    } else if (currIndex === slidesLen) {
         this.slidesEle.style.transitionProperty = 'none';
-        this.slidesEle.style.left = 0;
+        //this.slidesEle.style.left = 0;
+        this.slidesEle.style.transform = getTranVal(0);
         this.slidesEle.style.display = document.defaultView.getComputedStyle(this.slidesEle)['display'];
         this.slidesEle.style.transitionProperty = 'all';
         currIndex = 1;
+    } else if (this.inex === slidesLen - 1 && slideIndex !== undefined) {
+        this.slidesEle.style.transitionProperty = 'none';
+        //this.slidesEle.style.left = 0;
+        this.slidesEle.style.transform = getTranVal(0);
+        this.slidesEle.style.display = document.defaultView.getComputedStyle(this.slidesEle)['display'];
+        this.slidesEle.style.transitionProperty = 'all';
     }
 
     dotIndex = currIndex === slidesLen - 1 ? 0 : currIndex;
     this.dots[dotIndex].classList.add('focus');
 
     var posi = -(currIndex * slideWidth);
-    this.slidesEle.style.left = posi + 'px';
+    //this.slidesEle.style.left = posi + 'px';
+    this.slidesEle.style.transform = getTranVal(posi);
     this.index = currIndex;
 };
 
@@ -156,8 +169,7 @@ SlideShow.prototype.cleanClassTag = function() {
     }
 };
 
-SlideShow.prototype.fadein = function() {
-};
+SlideShow.prototype.fadein = function() {};
 
 
 SlideShow.prototype.fadein.setFocus = function(slideIndex) {
@@ -173,7 +185,7 @@ SlideShow.prototype.fadein.setFocus = function(slideIndex) {
         currIndex = this.slides.length - 1;
     } else if (currIndex === this.slides.length) {
         currIndex = 0;
-    } 
+    }
 
     this.cleanClassTag();
     this.slides[prevIndex].style.zIndex = '1';
@@ -192,3 +204,9 @@ var seckill = new SlideShow(ele, 'roll', false);
 
 var ele = document.querySelector('.grid_2 .sale-rank .tab-item-1');
 var rank = new SlideShow(ele, 'roll', false);
+
+var ele = document.querySelector('.grid_3 .find .slideshow');
+var findme = new SlideShow(ele, 'roll', true);
+
+var ele = document.querySelector('#st-special .slideshow');
+var findme = new SlideShow(ele, 'roll', true);

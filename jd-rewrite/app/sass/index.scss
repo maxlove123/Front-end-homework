@@ -10,6 +10,10 @@ a {
     color:inherit;
 }
 
+h2, h3, h4 {
+    font-weight: 400;
+}
+
 li {
     list-style-type: none;
 }
@@ -25,6 +29,7 @@ body {
     font-size: 12px;
     color: #666;
     background: #f6f6f6;
+
     -webkit-font-smoothing: antialiased;
 }
 
@@ -32,10 +37,25 @@ body {
     margin-right: 0!important;
 }
 
+@mixin t {
+    background-color: yellow;
+}
+
+.block, .b {
+    display: block;
+}
+
+.wrapper {
+    position: relative;
+    width: 1190px;
+    margin: 0 auto;
+}
+
 .slideshow {
     position: relative;
 }
 
+// slideshow control index
 @mixin dots($dots-bottom: 10px) {
     position: absolute;
     z-index: 10;
@@ -71,19 +91,15 @@ body {
         position: absolute;
         z-index: 20;
         top: 45%;
-
-        transform: translateY(-50%);
         width: 20px;
         height: 40px;
-        text-align: center;   
-        opacity: $opacity;    
-        border: 0;
-        background-color: rgba(0,0,0,0.4);
         line-height: 40px;
+        transform: translateY(-50%);
+        text-align: center;      opacity: $opacity;        border: 0;
+        background-color: rgba(0,0,0,0.4);
         i.icon-arrow-white {
             width: 6px;
             height: 11px;
-            //margin-top: 10px;
             background: url(../img/icon/arrow-left-white.png) no-repeat;
             background-size: 6px;
         }
@@ -97,44 +113,8 @@ body {
     .slideshow-con-next {
         right: 0;
         i {
-            transform: rotateY(180deg);
             margin-left: 2px;
-        }
-    }
-}
-
-@mixin icon($icon-link, $icon-width, $icon-height) {
-    background: $icon-link no-repeat;
-    background-size: $icon-width $icon-height;
-    width:$icon-width;
-    height:$icon-height;
-    vertical-align: middle;
-
-}
-
-@mixin t {
-    background-color: yellow;
-}
-
-.wrapper {
-    width: 1190px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.top-banner {
-    z-index: 2;
-    position:relative;
-    height: 80px;
-    text-align:center;
-    background-color: #bc3e28; 
-    .wrapper {
-        position: relative; 
-        i.close{
-            position:absolute;
-            right: 0;
-            top: 4px;
-            opacity:0.2;
+            transform: rotateY(180deg);
         }
     }
 }
@@ -146,14 +126,13 @@ body {
     margin-right:10px;
     margin-bottom: 30px;
     background-color: #fff;
-    .header {
+    .header, .box-header {
         height: 60px;
         padding: 0 20px;
         h3 {   
             display: inline-block;
-            margin-right: 2px;
+            margin-right: 0px;
             font-size: 22px;
-            font-weight: normal;
             line-height: 60px;
             vertical-align: middle;
             color: #222;
@@ -161,7 +140,8 @@ body {
         i.icon-cir-arrow {
             width: 23px;
             height: 23px;
-            margin-right: 6px;
+            margin-top: 2px;
+            margin-right: 2px;
             vertical-align: middle;
             background: url(../img/icon/cir-arrow.png) no-repeat;
         }
@@ -176,23 +156,265 @@ body {
     }
 }
 
-i.arrow-down {
+.stage {
+    .wrapper {
+        overflow: hidden;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        transition: 0.4s ease;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    .marg-l-20 {
+        margin-left: 20px;
+    }
+    .marg-r-20 {
+        margin-rights: 20px;
+    }
+    .bo-xlar-grid {
+        float: left;
+        overflow: hidden;
+        width: 350px;
+        height: 226px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        background: #fff;
+    }
+
+    .bo-lar-grid {
+        overflow: hidden;
+        width: 350px;
+        height: 180px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        background: #fff;
+    }
+    .bo-med-grid {
+        float: left;
+        overflow: hidden;
+        width: 170px;
+        height: 180px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        background: #fff;
+    }
+
+    .bo-sm-grid {
+        float: left;
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        margin-right: 25px;
+        background: #fff;
+    }
+    .bo-med-list {
+        width: 170px;
+        height: 180px;
+        table {
+            width: 350px;
+            border-collapse: collapse;
+            td {
+                height: 58px;
+                text-align:center;
+                border:1px solid #ebeaea;;
+                a {
+                    display: inline-block;
+                    width: 100%;
+                    img {
+                        width: 66px;
+                        height: 45px;
+                    }
+                }
+            }            
+        }
+
+    }
+
+    .st-header {
+        overflow: hidden;
+        width: 300px;
+        height: 45px;
+        margin:0 auto;
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+        color: #222;
+        @mixin line {
+            position: absolute;
+            top: 50%;
+            display: block;
+            width: 50px;
+            height: 3px;
+            content: "";
+            background: #222;
+        }
+        h3 {
+            position: relative;
+            display: inline-block;
+            &:before {
+                left: -70px;
+
+                @include line;
+            }
+            &:after {
+                right: -70px;
+
+                @include line;
+            }
+        }
+    }
+}
+
+.stage .st-body .grid-box {
+    overflow: hidden;
+    background: rgba(0,0,0,0);
+
+    @extend .third-box;
+    ul {
+        width: 400px;
+        height: 100%;
+        li {
+            float: left;
+            width: 190px;
+            height: 220px;
+            margin: 0 10px 10px 0;
+            text-align: center;
+            background: #fff;
+            .pic {
+                overflow: hidden;
+                width: 120px;
+                height: 120px;
+                margin: 25px auto 16px;
+            }
+            h3 {
+                display: inline-block;
+                overflow: hidden;
+                width: 120px;
+                height: 22px;
+                font-size: 14px;
+                line-height: 22px;
+                transition: color ease .2s;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                color: #333;
+                &:hover {
+                    color: #e33333;
+                }
+            }
+            p {
+                overflow: hidden;
+                height: 24px;
+                font-size: 16px;
+                line-height: 24px;
+                color: #e33333;
+            }
+        }
+    }
+}
+
+.stage .st-body .brand-shop {
+    float: left;
+    width: 390px;
+    height: 450px;
+    margin-right:10px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    .bra-header {
+        height: 45px;
+        padding: 20px 20px;
+        .brand-pic {
+            display: inline-block;
+            float:left;
+            overflow: hidden;
+            width: 130px;
+            height: 43px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        h3 {
+            font-size: 18px;
+            line-height: 45px;
+        }
+    }
+    .bra-body {
+        overflow: hidden;
+        padding: 0 20px;
+    }
+}
+
+.stage .st-body .dec-box-r {
+    position:relative;
+    background-color: rgba(0, 0, 0, 0);
+
+    @extend .third-box;
+    .dec-box-content {
+        width: 340px;
+        height: 420px;
+        // background: #fff;
+        margin-left: 20px;
+        a {
+            font-size: 0;
+            background: #fff;
+        }
+        .dec-item {
+            width: 340px;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+    }
+    &:before {
+        position:absolute;
+        z-index: -1;
+        top: 20px;
+        right: 0;
+        display: block;
+        width: 340px;
+        height: 420px;
+        content: "";
+        border: 5px solid #333;
+    }
+}
+.stage .st-body .dec-box-l {
+    @extend .dec-box-r;
+    .dec-box-content {
+        margin-left: 30px;
+    }
+    &:before {
+        left: 0;
+    }
+}
+
+
+@mixin icon($icon-link, $icon-width, $icon-height) {
+    width:$icon-width;
+    height:$icon-height;
+    vertical-align: middle;
+    background: $icon-link no-repeat;
+    background-size: $icon-width $icon-height;
+}
+
+i.arrow-down { 
+    margin-top: -4px;    
     @include icon(
         $icon-link: url(../img/icon/arrow-down.png), 
         $icon-width: 12px,
         $icon-height: 12px
     ); 
-    margin-top: -4px;  
-}
+
+    }
 
 i.site {
+    margin-top: -4px;
+
     @include icon(
         $icon-link: url(../img/icon/site.png), 
         $icon-width: 16px,
         $icon-height: 16px
     ); 
-    margin-top: -4px;
-}
+    }
 i.close {
     @include icon(
         $icon-link: url(../img/icon/close.png), 
@@ -209,14 +431,15 @@ i.icon-search {
     );   
 }
 
-i.icon-chart {
+i.icon-chart {     
+    margin-top: -4px;
+
     @include icon(
         $icon-link: url(../img/icon/cart.png), 
         $icon-width: 20px,
         $icon-height: 20px
     );     
-    margin-top: -4px;  
-}
+    }
 
 i.icon-empty-cart {
     @include icon(
@@ -226,8 +449,27 @@ i.icon-empty-cart {
     );       
 }
 
+.top-banner {
+    position:relative;
+    z-index: 2;
+    height: 80px;
+    text-align:center;
+    background-color: #bc3e28; 
+    .wrapper {
+        position: relative; 
+        i.close {
+            position:absolute;
+            top: 4px;
+            right: 0;
+            opacity:0.2;
+        }
+    }
+}
+
 @import "_sitenav";
 @import "_header";
 @import "_grid_1";
 @import "_secondkill";
 @import "_grid_2";
+@import "_grid_3";
+@import "_fashion"

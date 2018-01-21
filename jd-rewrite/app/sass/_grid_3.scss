@@ -1,0 +1,130 @@
+.grid_3 {
+    .wrapper {
+        overflow: hidden;
+    }
+}
+.grid_3 .find .box-body {     
+    .slideshow {
+        height: 390px;
+        .slides-w {
+            overflow: hidden;
+            width: 350px;
+            margin: 0 20px;
+        }
+        .slides {
+            position: relative;
+            width: 1600px;
+            height: 355px;
+            margin: 0 auto;
+            border-bottom: 1px solid #f5f5f5;
+            .slide {
+                float: left;
+                width: 350px;
+                height: 355px;
+            }         
+        }
+        .dots {
+            @include dots;
+        }
+        .slideshow-controls {
+            @include slideshow-controls;
+        }
+    }
+}
+.grid_3 .find .slideshow a.slide-item {
+    display: block;
+    cursor: point;
+    .pic {
+        width: 350px;
+        height: 250px;
+        transition: opacity 0.4s ease; 
+        img {
+            width: 350px;
+            height: 250px;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    h3.title {
+        overflow: hidden;
+        height: 50px;
+        font-size: 18px;
+        line-height: 56px;
+        white-space: nowrap;
+        text-overflow:ellipsis;
+        color: #333;
+    }
+    p.desc {
+        overflow: hidden;
+        height: 40px;
+        font-size: 14px;
+        text-align: center;
+        color: #999;
+    }
+}
+
+.grid_3 .find-goods .box-body {
+    height: 390px;  
+    margin: 0 15px;
+    border-top: 1px solid #f5f5f5;
+    a {
+        display: block;
+        li {
+            float: left;
+            width: 110px;
+            height: 125px;
+            margin: 0 5px;
+            text-align: center;  
+            .pic {
+                width: 70px;
+                height: 70px;
+                margin: 8px auto;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .title {
+                display: block;
+                overflow: hidden;
+                height: 34px;
+                padding: 0 4px;
+                font-size: 14px;
+                line-height: 34px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                color: #333;
+            }
+        }
+    }  
+}
+
+.grid_3 .walk .box-body {
+    padding: 0 20px; 
+    a {
+       display:block; 
+       pic {
+            width: 100%;
+            height: 250px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        ul {
+            overflow: hidden;
+            li {
+                float:left;
+                width: 110px;
+                height: 110px;
+                margin-right:10px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+    }
+}
