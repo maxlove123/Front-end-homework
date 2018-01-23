@@ -157,6 +157,9 @@ body {
 }
 
 .stage {
+    .a {
+        display: block;
+    }
     .wrapper {
         overflow: hidden;
     }
@@ -346,10 +349,9 @@ body {
 }
 
 .stage .st-body .dec-box-r {
+    @extend .third-box;
     position:relative;
     background-color: rgba(0, 0, 0, 0);
-
-    @extend .third-box;
     .dec-box-content {
         width: 340px;
         height: 420px;

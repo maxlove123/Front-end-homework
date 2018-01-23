@@ -90,6 +90,10 @@ body {
   height: 390px;
 }
 
+.stage .a {
+  display: block;
+}
+
 .stage .wrapper {
   overflow: hidden;
 }
@@ -2270,7 +2274,11 @@ i.icon-empty-cart {
 
 #st-special .st-body {
   width: 100%;
-  height: 385px;
+  height: 365px;
+}
+
+#st-special .st-body .slideshow {
+  height: 100%;
 }
 
 #st-special .st-body .slideshow .slides-w {
@@ -2289,7 +2297,6 @@ i.icon-empty-cart {
 }
 
 #st-special .st-body .slideshow .dots {
-  bottom: -30px;
   position: absolute;
   z-index: 10;
   bottom: 10px;

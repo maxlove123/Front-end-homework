@@ -1,7 +1,13 @@
-var SlideShow = function(slideshowEle, animType, isRun) {
-    this.index = 0;
-    this.isRun = isRun !== undefined ? isRun : true;
-    this.isPause = false;
+var SlideShow = function(slideshowEle, animType, autoRun, parameters) {
+
+    parameters = parameters || {};
+    this.gpu = parameters.gpu !== undefined ? parameters.gpu : true;
+    this.autoRun = parameters.autoRun !== undefined ? parameters.autoRun : true;
+    this.startSlide = parameters.startSlide !== undefined ? parameters.startSlide : 0;
+
+    this.autoRun = false;
+    this.pause = false;
+    this.index = this.startSlide; 
     this.animType = animType;
     this.slideshowEle = slideshowEle;
     this.slidesEle = slideshowEle.querySelector('.slides');
@@ -32,21 +38,20 @@ var SlideShow = function(slideshowEle, animType, isRun) {
     this.run();
 };
 
-
 SlideShow.prototype.init = function() {
     this[this.animType]();
 
     var _this = this;
     var slideshowEle = this.slideshowEle;
     slideshowEle.addEventListener('mouseenter', function() {
-        _this.isPause = true;
+        _this.pause = true;
     });
     slideshowEle.addEventListener('mouseleave', function() {
-        _this.isPause = false;
+        _this.pause = false;
     });
 
     this.prevBtn.addEventListener('click', function() {
-        _this.setFocus(_this.index - 1);
+        _this.setFocus(_this.index - 1, 'left-key');
     });
 
     this.nextBtn.addEventListener('click', function() {
@@ -90,68 +95,69 @@ SlideShow.prototype.addStyle = function() {
 SlideShow.prototype.run = function() {
     var _this = this;
     this.animation = setInterval(function() {
-        if (_this.isRun && !_this.isPause) {
+        if (_this.autoRun && !_this.pause) {
             _this.setFocus();
         }
     }, 2000);
 };
 
-
-
-SlideShow.prototype.setFocus = function(index) {
-    this[this.animType].setFocus.call(this, index);
+SlideShow.prototype.setFocus = function(index, who) {
+    this[this.animType].setFocus.call(this, index, who);
 };
+
 
 SlideShow.prototype.roll = function() {
     var endSlide = this.slides[0].cloneNode(true);
     // endSlide.style.background = 'green';
     this.slidesEle.append(endSlide);
     this.slidesEle.classList.add('roll');
+    // this.slides[this.slides.length - 2].style.background = 'yellow';
 };
 
-SlideShow.prototype.roll.setFocus = function(slideIndex) {
-    function getTranVal(dis) {
-        return 'translate3d(' + dis + 'px, 0px, 0px)';
+SlideShow.prototype.roll.setFocus = function(slideIndex, who) {
+    _setMoveDistance = (distance) => {
+        if(this.gpu) {
+            var value = 'translate3d(' + distance + 'px, 0px, 0px)';
+            this.slidesEle.style.transform = value;
+        } else {
+            this.slidesEle.style.left = distance;
+        }
     };
+    _resetMoveDistance = (distance) => {
+        // set move distance,don't playing animation
+        var transitionProperty = this.slidesEle.style.transitionProperty;
+        this.slidesEle.style.transitionProperty = 'none';
+        _setMoveDistance(distance);
+        this.slidesEle.style.display = document.defaultView.getComputedStyle(this.slidesEle)['display'];
+        this.slidesEle.style.transitionProperty = transitionProperty || 'all';
+    };
+
     this.cleanClassTag();
 
     var currIndex;
+    var slidesLen = this.slides.length;
+    var slideWidth = this.slides[0].clientWidth;
     if (slideIndex !== undefined) {
         currIndex = slideIndex;
     } else {
         currIndex = this.index + 1;
     }
-
-    var slidesLen = this.slides.length;
-    var slideWidth = this.slides[0].clientWidth;
     if (currIndex === -1) {
-        this.slidesEle.style.transitionProperty = 'none';
-        //this.slidesEle.style.left = -(slidesLen - 1) * slideWidth + 'px';
-        this.slidesEle.style.transform = getTranVal(-(slidesLen - 1) * slideWidth);
-        this.slidesEle.style.display = document.defaultView.getComputedStyle(this.slidesEle)['display'];
-        this.slidesEle.style.transitionProperty = 'all';
+        var distance = -(slidesLen - 1) * slideWidth;
+        _resetMoveDistance(distance);
         currIndex = (slidesLen - 1) - 1;
     } else if (currIndex === slidesLen) {
-        this.slidesEle.style.transitionProperty = 'none';
-        //this.slidesEle.style.left = 0;
-        this.slidesEle.style.transform = getTranVal(0);
-        this.slidesEle.style.display = document.defaultView.getComputedStyle(this.slidesEle)['display'];
-        this.slidesEle.style.transitionProperty = 'all';
+        _resetMoveDistance(0);
         currIndex = 1;
-    } else if (this.inex === slidesLen - 1 && slideIndex !== undefined) {
-        this.slidesEle.style.transitionProperty = 'none';
-        //this.slidesEle.style.left = 0;
-        this.slidesEle.style.transform = getTranVal(0);
-        this.slidesEle.style.display = document.defaultView.getComputedStyle(this.slidesEle)['display'];
-        this.slidesEle.style.transitionProperty = 'all';
+    } else if (this.index === slidesLen - 1 && slideIndex !== undefined) {
+        if (who !== 'left-key') {
+           _resetMoveDistance(0);
+        }
     }
 
     dotIndex = currIndex === slidesLen - 1 ? 0 : currIndex;
     this.dots[dotIndex].classList.add('focus');
-
-    var posi = -(currIndex * slideWidth);
-    //this.slidesEle.style.left = posi + 'px';
-    this.slidesEle.style.transform = getTranVal(posi);
+    _setMoveDistance(-(currIndex * slideWidth));
     this.index = currIndex;
 };
 
@@ -206,7 +212,7 @@ var ele = document.querySelector('.grid_2 .sale-rank .tab-item-1');
 var rank = new SlideShow(ele, 'roll', false);
 
 var ele = document.querySelector('.grid_3 .find .slideshow');
-var findme = new SlideShow(ele, 'roll', true);
+var findme = new SlideShow(ele, 'roll',false);
 
 var ele = document.querySelector('#st-special .slideshow');
 var findme = new SlideShow(ele, 'roll', true);

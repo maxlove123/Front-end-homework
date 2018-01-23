@@ -1,29 +1,25 @@
-#st-special {
-    .wrapper {
-    }
-    .st-body {
-        width: 100%;
-        height: 385px;
-        .slideshow {
-            .slides-w {
-                width: 100%; 
-                background-color: #fff;
-                .slides {
-                    width: 8000px;
-                    height: 330px;
-                    margin-right: 10px;
-                    .slide {
-                        float: left;
-                    }
+#st-special .st-body{
+    width: 100%;
+    height: 365px;
+    .slideshow {
+        height: 100%;
+        .slides-w {
+            width: 100%; 
+            background-color: #fff;
+            .slides {
+                width: 8000px;
+                height: 330px;
+                margin-right: 10px;
+                .slide {
+                    float: left;
                 }
             }
-            .dots {
-                bottom: -30px;
-                @include dots;
-            }
-            .slideshow-controls {
-                @include slideshow-controls;
-            }
+        }
+        .dots {
+            @include dots;
+        }
+        .slideshow-controls {
+            @include slideshow-controls;
         }
     }
 }
