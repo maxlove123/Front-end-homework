@@ -7,7 +7,7 @@ $jd-red: #f10215;
 
 a {
     text-decoration: none;
-    color:inherit;
+    color: inherit;
 }
 
 h2, h3, h4 {
@@ -15,12 +15,15 @@ h2, h3, h4 {
 }
 
 li {
-    list-style-type: none;
+    list-style: none;
 }
 
 i {
     display: inline-block;
     font-style: normal;
+}
+*:before, *:after {
+    -webkit-backface-visibility: hidden;
 }
 
 body {
@@ -474,4 +477,5 @@ i.icon-empty-cart {
 @import "_secondkill";
 @import "_grid_2";
 @import "_grid_3";
-@import "_fashion"
+@import "_fashion";
+@import "_footer";

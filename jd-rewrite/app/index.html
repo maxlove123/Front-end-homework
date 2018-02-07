@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
-
+    <style type="text/css">
+        .top-banner {
+            transition: 0.2s ease;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <div class="top-banner">
         <div class="wrapper">
             <a href="javascript:void(0)"><img src="img/banner/5a5719adN1cbc2e64.jpg"></a>
-            <a href="javascript:void(0)"><i class="icon close"></i></a>
+            <a id="top-hide-btn" href="javascript:void(0)"><i class="icon close"></i></a>
         </div>
     </div>
     <div class="sitenav">
@@ -602,46 +607,92 @@
                             </a>
                         </li>
                     </ul>
-                    <ul class="info">
-                        <li clss="item">
-                            <div class="nav">
-                                <ul>
-                                    <li class=""><a href="javascript:void(0)">国内机票</a></li>
-                                    <li><a href="javascript:void(0)">国际/港澳台</a></li>
-                                    <li><a href="javascript:void(0)">特惠</a></li>
+                    <div class="info">
+                        <ul class="info-tag">
+                            <li><a href="javascript:void(0)">话费</a></li>
+                            <li><a href="javascript:void(0)">机票</a></li>
+                            <li><a href="javascript:void(0)">酒店</a></li>
+                            <li><a href="javascript:void(0)">游戏</a></li>
+                        </ul>
+                        <ul class="tag-content">
+                            <li class="tc-item">
+                                <div class="nav">
+                                    <ul>
+                                        <li class=""><a href="javascript:void(0)">话费充值</a></li>
+                                        <li><a href="javascript:void(0)">流量重置</a></li>
+                                        <li><a href="javascript:void(0)">套餐变更</a></li>
+                                    </ul>
+                                    <ul class="option">
+                                        <li class="option-1">
+                                            <p class="flight-type">
+                                                <input type="radio" name="flight-type">
+                                                <label form="">单程</label>
+                                                <input type="radio" name="flight-type">
+                                                <label form="">往返</label>
+                                            </p>
+                                            <div class="sity">
+                                                <div class="start-sity">
+                                                    <label>出发</label>
+                                                    <input type="input" name="" placeholder="城市">
+                                                </div>
+                                                <div class="end-sity">
+                                                    <label>到达</label>
+                                                    <input type="input" name="" placeholder="城市">
+                                                </div>
+                                                <button class="reverse-sity"></button>
+                                            </div>
+                                            <p class="date">
+                                                <label>日期</label>
+                                                <input type="input" name="" placeholder="出发">
+                                            </p>
+                                            <p class="search">
+                                                <span class="ticket-search">机票查询</span>
+                                                <span class="sale-info">当季热门特惠机票</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                          <!--   <li class="tc-item">
+                                <div class="nav">
+                                    <ul>
+                                        <li class=""><a href="javascript:void(0)">国内机票</a></li>
+                                        <li><a href="javascript:void(0)">国际/港澳台</a></li>
+                                        <li><a href="javascript:void(0)">特惠</a></li>
+                                    </ul>
+                                </div>
+                                <ul class="option">
+                                    <li class="option-1">
+                                        <p class="flight-type">
+                                            <input type="radio" name="flight-type">
+                                            <label form="">单程</label>
+                                            <input type="radio" name="flight-type">
+                                            <label form="">往返</label>
+                                        </p>
+                                        <div class="sity">
+                                            <div class="start-sity">
+                                                <label>出发</label>
+                                                <input type="input" name="" placeholder="城市">
+                                            </div>
+                                            <div class="end-sity">
+                                                <label>到达</label>
+                                                <input type="input" name="" placeholder="城市">
+                                            </div>
+                                            <button class="reverse-sity"></button>
+                                        </div>
+                                        <p class="date">
+                                            <label>日期</label>
+                                            <input type="input" name="" placeholder="出发">
+                                        </p>
+                                        <p class="search">
+                                            <span class="ticket-search">机票查询</span>
+                                            <span class="sale-info">当季热门特惠机票</span>
+                                        </p>
+                                    </li>
                                 </ul>
-                            </div>
-                            <ul class="option">
-                                <li class="option-1">
-                                    <p class="flight-type">
-                                        <input type="radio" name="flight-type">
-                                        <label form="">单程</label>
-                                        <input type="radio" name="flight-type">
-                                        <label form="">往返</label>
-                                    </p>
-                                    <div class="sity">
-                                        <div class="start-sity">
-                                            <label>出发</label>
-                                            <input type="input" name="" placeholder="城市">
-                                        </div>
-                                        <div class="end-sity">
-                                            <label>到达</label>
-                                            <input type="input" name="" placeholder="城市">
-                                        </div>
-                                        <button class="reverse-sity"></button>
-                                    </div>
-                                    <p class="date">
-                                        <label>日期</label>
-                                        <input type="input" name="" placeholder="出发">
-                                    </p>
-                                    <p class="search">
-                                        <span class="ticket-search">机票查询</span>
-                                        <span class="sale-info">当季热门特惠机票</span>
-                                    </p>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                            </li> -->
+                        </ul> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -660,14 +711,6 @@
                 </div>
             </div>
             <div class="sek-list">
-    <!--             <div class="btns">
-                    <div class="l-btn">
-                        <i class="icon-arrow-white"></i>
-                    </div>
-                    <div class="r-btn">
-                        <i class="icon-arrow-white"></i>
-                    </div>
-                </div> -->
                 <div class="sek-goods">
                     <div class="slideshow">                
                         <ul class="slides"> 
@@ -847,8 +890,8 @@
                 </div>
             </div>
             <div class="banner-w">
-                <div class="slide-show">
-                    <ul class="slide-box">
+                <div class="slideshow">
+                    <ul class="slides">
                         <li class="slide">
                             <a href="javascript:void(0)">
                                 <img src="img/banner/5a58b24bNec7b5728.jpg">
@@ -860,7 +903,7 @@
                             </a>
                         </li>
                     </ul>
-                    <ul class="dots-box">
+                    <ul class="dots">
                         <li><i class="icon-dot"></i></li>
                         <li><i class="icon-dot"></i></li>
                     </ul>
@@ -881,10 +924,10 @@
                 <div class="tabs">
                     <ul>
                         <li><a href="javascript:void(0)">大 家 电</a></li>
-                        <li><a href="javascript:void(0)">手机通讯</a></li>
-                        <li><a href="javascript:void(0)">休闲食品</a></li>
-                        <li><a href="javascript:void(0)">中外名酒</a></li>
-                        <li><a href="javascript:void(0)">厨房小电</a></li>
+                        <li><a href="javascript:void(0)">白 酒</a></li>
+                        <li><a href="javascript:void(0)">智能设备</a></li>
+                        <li><a href="javascript:void(0)">T 恤</a></li>
+                        <li><a href="javascript:void(0)">安全座椅</a></li>
                     </ul>
                 </div>
                 <div class="tab-items">
@@ -945,7 +988,243 @@
                             <li class="dot"><i></i></li>
                         </ul>
                     </div>
-                    <!-- slideshow end -->
+                    <!-- tab-item-1 slideshow end -->
+
+                    <div class="tab-item-2 slideshow">
+                        <div class="slides">
+                            <ul class="slide">
+                                <li class="slide-item">
+                                    <img src="img/goods/59fc4042Nd175de11.jpg">
+                                    <i class="icon-num">1</i>
+                                    <span class="item-info">
+                                        郎酒 老郎酒小酒 43度 酱香型白酒 108ml
+                                    </span>
+                                </li>
+                                <li class="slide-item">
+                                    <img src="img/goods/58ef3778N4aee1574.jpg">
+                                    <i class="icon-num">2</i>
+                                    <span class="item-info">
+                                        稻花香 白酒 老酒坊 42度整箱 500ml*12瓶
+                                    </span>
+                                </li>
+                                <li class="slide-item">
+                                    <img src="img/goods/596c1b7dNed533cb2.jpg">
+                                    <i class="icon-num">3</i>
+                                    <span class="item-info">
+                                        稻花香 老酒坊 浓香型白酒 42度500ml单瓶装
+                                    </span>
+                                </li>
+                            </ul>
+                            <!-- slide page 1 end -->
+                            <ul class="slide">
+                                <li class="slide-item">
+                                    <img src="img/goods/578334eaN3c3a5b8e.jpg">
+                                    <i class="icon-num">4</i>
+                                    <span class="item-info">
+                                        汾酒 出口玻汾53度500ml 清香型白酒
+                                    </span>
+                                </li>
+                                <li class="slide-item">
+                                    <img src="img/goods/596d6ca5Nfe62d936.jpg">
+                                    <i class="icon-num">5</i>
+                                    <span class="item-info">
+                                        汾酒 10老白汾 53度 475ml 单瓶装 清香型白酒（新老包装随机发货）
+                                    </span>
+                                </li>
+                                <li class="slide-item">
+                                    <img src="img/goods/596c374fN4e91fcc4.jpg">
+                                    <i class="icon-num">6</i>
+                                    <span class="item-info">
+                                        汾酒 乳玻汾 48度 475ml×12瓶 整箱装 清香型白酒
+                                    </span>
+                                </li>
+                            </ul>
+                            <!-- slide page 2 end -->
+                        </div>
+                        <!-- slides end -->
+                        <ul class="dots">
+                            <li class="dot"><i></i></li>
+                            <li class="dot"><i></i></li>
+                        </ul>
+                    </div>
+                    <!-- tab-item-2 slideshow end -->
+
+                    <div class="tab-item-3 slideshow">
+                        <div class="slides">
+                            <ul class="slide">
+                                <li class="slide-item">
+                                    <img src="img/goods/58b53741Nd1399c11.jpg">
+                                    <i class="icon-num">1</i>
+                                    <span class="item-info">
+                                        小米（MI）体脂秤白色 体重秤 智能体脂秤 电子秤 人体秤 家用体重秤 精准 APP数据测量
+                                    </span>
+                                </li>
+                                <li class="slide-item">
+                                    <img src="img/goods/574d9d9aNe4e6fa7a.jpg">
+                                    <i class="icon-num">2</i>
+                                    <span class="item-info">
+                                        小米（MI）小米手环2 智能运动 心率监测 来电提醒 久坐提醒 LED显示屏 时间显示 防水计步器 无感腕带
+                                    </span>
+                                </li>
+                                <li class="slide-item">
+                                    <img src="img/goods/565d57f3Ndaeaba94.jpg">
+                                    <i class="icon-num">3</i>
+                                    <span class="item-info">
+                                        小米（MI）小米净化器2智能家用卧室空气净化器除甲醛雾霾PM2.5
+                                    </span>
+                                </li>
+                            </ul>
+                            <!-- slide page 1 end -->
+                            <ul class="slide">
+                                <li class="slide-item">
+                                    <img src="img/goods/580f2cdcN5facc835.jpg">
+                                    <i class="icon-num">4</i>
+                                    <span class="item-info">
+                                        小米（MI）米兔智能故事机儿童早教机Wifi 微信远程互动 男孩女孩0-6岁宝宝婴儿幼儿 益智玩具学习机
+                                    </span>
+                                </li>
+                                <li class="slide-item">
+                                    <img src="img/goods/57e20973N333612c6.jpg">
+                                    <i class="icon-num">5</i>
+                                    <span class="item-info">
+                                        米家（MIJIA）扫地机器人 小米扫地机器人 智能规划路线吸尘器 智能自动 米家扫地机器人
+                                    </span>
+                                </li>
+                                <li class="slide-item">
+                                    <img src="img/goods/59145707N26c2f6cd.jpg">
+                                    <i class="icon-num">6</i>
+                                    <span class="item-info">
+                                        米家 MIJIA 小米 米家智能摄像机 360°全景侦测 红外夜视720P分辨率云台版
+                                    </span>
+                                </li>
+                            </ul>
+                            <!-- slide page 2 end -->
+                        </div>
+                        <!-- slides end -->
+                        <ul class="dots">
+                            <li class="dot"><i></i></li>
+                            <li class="dot"><i></i></li>
+                        </ul>
+                    </div>
+                    <!-- tab-item-3 slideshow end -->
+
+                    <div class="tab-item-4 slideshow">
+                        <div class="slides">
+                            <ul class="slide">
+                                <li class="slide-item">
+                                    <img src="img/goods/59a888a4N8ec9dac3.png">
+                                    <i class="icon-num">1</i>
+                                    <span class="item-info">
+                                        花花公子长袖T恤男V领纯棉加绒t恤2017秋冬新款保暖打底衫修身衣服男装上衣潮 8165/黑色 175/XL
+                                    </span>
+                                </li>
+                                <li class="slide-item">
+                                    <img src="img/goods/5a103a93Ne6795817.jpg">
+                                    <i class="icon-num">2</i>
+                                    <span class="item-info">
+                                        【买一送一】【加绒可选】长袖T恤男2017秋冬新款男士印花刺绣套头卫衣男 白色菱形+黑色菱形 M
+                                    </span>
+                                </li>
+                                <li class="slide-item">
+                                    <img src="img/goods/5a1995c7Nd3878061.jpg">
+                                    <i class="icon-num">3</i>
+                                    <span class="item-info">
+                                        加绒长袖T恤男士上衣打底小衫2017秋冬季新款青年加厚圆领体恤时尚保暖秋衣男装 01加绒-倒勾(黑色) XL(130斤-145斤)
+                                    </span>
+                                </li>
+                            </ul>
+                            <!-- slide page 1 end -->
+                            <ul class="slide">
+                                <li class="slide-item">
+                                    <img src="img/goods/5a6e0002N8aece7b3.jpg">
+                                    <i class="icon-num">4</i>
+                                    <span class="item-info">
+                                        花花公子长袖T恤男加绒2017秋冬新款圆领上衣男士休闲保暖打底衫潮流男装加厚体恤 5101/黑色 175/XL
+                                    </span>
+                                </li>
+                                <li class="slide-item">
+                                    <img src="img/goods/5a3ff306Ndb8ffba6.jpg">
+                                    <i class="icon-num">5</i>
+                                    <span class="item-info">
+                                        敦尼亚长袖T恤男2017秋冬新款上衣服男中青年圆领休闲加绒加厚纯棉t恤打底衫体恤 宝  蓝 色 XL
+                                    </span>
+                                </li>
+                                <li class="slide-item">
+                                    <img src="img/goods/5770cb02N833e297c.jpg">
+                                    <i class="icon-num">6</i>
+                                    <span class="item-info">
+                                        七匹狼短袖T恤男 夏装新款男装 纯棉薄款t恤打底衫 圆领黑色 2XL(180/105)
+                                    </span>
+                                </li>
+                            </ul>
+                            <!-- slide page 2 end -->
+                        </div>
+                        <!-- slides end -->
+                        <ul class="dots">
+                            <li class="dot"><i></i></li>
+                            <li class="dot"><i></i></li>
+                        </ul>
+                    </div>
+                    <!-- tab-item-4 slideshow end -->
+
+                    <div class="tab-item-5 slideshow">
+                        <div class="slides">
+                            <ul class="slide">
+                                <li class="slide-item">
+                                    <img src="img/goods/5a1b8412Nc4a9f5d6.jpg">
+                                    <i class="icon-num">1</i>
+                                    <span class="item-info">
+                                        路途乐(Lutule) 汽车儿童安全座椅isofix软连接 适合约9月-12岁宝宝座椅 熊A 酷酷黑
+                                    </span>
+                                </li>
+                                <li class="slide-item">
+                                    <img src="img/goods/59113accN7525f873.jpg">
+                                    <i class="icon-num">2</i>
+                                    <span class="item-info">
+                                        英国Joie巧儿宜汽车儿童安全座椅isofix硬接口9个月-12岁盖世战神 中国红
+                                    </span>
+                                </li>
+                                <li class="slide-item">
+                                    <img src="img/goods/5a62fdcfN59c68dc9.jpg">
+                                    <i class="icon-num">3</i>
+                                    <span class="item-info">
+                                        阿布纳（Abner） 德国婴儿童安全座椅汽车用0-4-12岁宝宝可躺isofix硬接口 大黄蜂（宇航员）
+                                    </span>
+                                </li>
+                            </ul>
+                            <!-- slide page 1 end -->
+                            <ul class="slide">
+                                <li class="slide-item">
+                                    <img src="img/goods/5a1b85a5N1ffada12.jpg">
+                                    <i class="icon-num">4</i>
+                                    <span class="item-info">
+                                        感恩ganen 宝宝汽车儿童安全座椅 旅行者 红黑色 9个月-12岁
+                                    </span>
+                                </li>
+                                <li class="slide-item">
+                                    <img src="img/goods/5a1bb192N6718f47e.jpg">
+                                    <i class="icon-num">5</i>
+                                    <span class="item-info">
+                                        路途乐(Lutule) 汽车儿童安全座椅isofix硬接口 坐躺可调0-12岁宝宝座椅 Airs系列 旗舰红
+                                    </span>
+                                </li>
+                                <li class="slide-item">
+                                    <img src="img/goods/5a17c675Nad799977.jpg">
+                                    <i class="icon-num">6</i>
+                                    <span class="item-info">
+                                        gb好孩子高速汽车儿童安全座椅 欧标五点式安全带 双向安装 CS718-N004 灰色满天星 （0-7岁）
+                                    </span>
+                                </li>
+                            </ul>
+                            <!-- slide page 2 end -->
+                        </div>
+                        <!-- slides end -->
+                        <ul class="dots">
+                            <li class="dot"><i></i></li>
+                            <li class="dot"><i></i></li>
+                        </ul>
+                    </div>
+                    <!-- tab-item-5 slideshow end -->
                 </div>
             </div>
             <div class="third-box pick-series">
@@ -958,23 +1237,57 @@
                 </div>
                 <div class="box-body">
                     <div class="slideshow">
-                        <ul class="slides">
-                            <li class="slide">
-                                <img src="img/banner/ca1.webp">
-                                <div class="slide-info">
-                                    <h3>
-                                        <span>长假疯游，大容量存储卡备足说走就走！</span>
-                                    </h3>
-                                    <h4>
-                                        作为玩机一族，手机内存会感觉永远不够用滴！遇到好玩的APP要下载，热门手机游戏也不可错过，在坐公交地铁时是游戏陪你度过无聊时光。还有生活照、旅游照和音乐视频等，手机不堪重负内存不够怎么行，64G大内存卡已备好，挑一款吧！
-                                    </h4>
-                                    <a class="new-view" href="javascript: void(0)">
-                                        <button>立即查看</button>
-                                    </a>
-                                </div>
-                            </li>
-                            <!-- slide page 1 end -->
-                        </ul>
+                        <div class="slides-wrapper">                       
+                            <ul class="slides">
+                                <li class="slide">
+                                    <img src="img/banner/ca1.webp">
+                                    <div class="slide-info">
+                                        <h3>
+                                            <span>长假疯游，大容量存储卡备足说走就走！</span>
+                                        </h3>
+                                        <h4>
+                                            作为玩机一族，手机内存会感觉永远不够用滴！遇到好玩的APP要下载，热门手机游戏也不可错过，在坐公交地铁时是游戏陪你度过无聊时光。还有生活照、旅游照和音乐视频等，手机不堪重负内存不够怎么行，64G大内存卡已备好，挑一款吧！
+                                        </h4>
+                                        <a class="new-view" href="javascript: void(0)">
+                                            <button>立即查看</button>
+                                        </a>
+                                    </div>
+                                </li>
+                                <!-- slide page 1 end -->
+
+                                <li class="slide">
+                                    <img src="img/banner/5a4f8cd5Nb987c798.jpg">
+                                    <div class="slide-info">
+                                        <h3>
+                                            <span>辞旧迎新“机”，曲屏观视界美颜</span>
+                                        </h3>
+                                        <h4>
+                                            随着时间的过去，家里的电视也开始出现了各种小毛病。近年来随着创新科技和人工智能的不断发展，曲面智能电视机越来越获得大众的青睐。其独特的流线，让人感到一种身临其境的包围感。外形的设计高端大气，放在家中更显格调。
+                                        </h4>
+                                        <a class="new-view" href="javascript: void(0)">
+                                            <button>立即查看</button>
+                                        </a>
+                                    </div>
+                                </li>
+                                <!-- slide page 2 end -->
+
+                                <li class="slide">
+                                    <img src="img/banner/5874b528N85270797.jpg">
+                                    <div class="slide-info">
+                                        <h3>
+                                            <span>一穿就美的连衣裙，速get</span>
+                                        </h3>
+                                        <h4>
+                                            打开衣橱，里面最多的单品应该就是连衣裙了吧！一体式的穿着不仅好穿，而且还超级好搭配。即便是在寒冷的冬季，也是不可少的流行趋势。在款式和面料上的选择很多，无论是在办公室单穿，或是秋冬出街时叠穿，毫无疑问连衣裙都是菇凉们必buy的单品，你get了吗？
+                                        </h4>
+                                        <a class="new-view" href="javascript: void(0)">
+                                            <button>立即查看</button>
+                                        </a>
+                                    </div>
+                                </li>
+                                <!-- slide page 3 end -->
+                            </ul>
+                        </div>
                         <ul class="dots">
                             <li class="dot"><i></i></li>
                             <li class="dot"><i></i></li>
@@ -1013,6 +1326,60 @@
                                             <h3 class="tic-money">
                                                 <i class="icon-money">$</i>
                                                 <span>20</span>
+                                            </h3>
+                                            <h4 class="tic-limit">满500元可用</h4>
+                                            <p class="tic-desc">全品类（除特殊商品）【14点限量抢】 </p>
+                                        </div>
+                                        <div class="more-ticket">
+                                            <span>更多精选好券</span>
+                                        </div>
+                                    </li>
+                                    <li class="slide-item">
+                                        <div class="ticket-img">
+                                            <img src="img/goods/tic2.webp">
+                                        </div>
+                                        <div class="ticket-info">
+                                            <h3 class="tic-money">
+                                                <i class="icon-money">$</i>
+                                                <span>50</span>
+                                            </h3>
+                                            <h4 class="tic-limit">满480元可用</h4>
+                                            <p class="tic-desc">自营手机部分商品</p>
+                                        </div>
+                                        <div class="more-ticket">
+                                            <span>更多精选好券</span>
+                                        </div>
+                                    </li>
+                                    <li class="slide-item">
+                                        <div class="ticket-img">
+                                            <img src="img/goods/tic3.webp">
+                                        </div>
+                                        <div class="ticket-info">
+                                            <h3 class="tic-money">
+                                                <i class="icon-money">$</i>
+                                                <span>5</span>
+                                            </h3>
+                                            <h4 class="tic-limit">满110元可用</h4>
+                                            <p class="tic-desc">自营牛奶部分商品</p>
+                                        </div>
+                                        <div class="more-ticket">
+                                            <span>更多精选好券</span>
+                                        </div>
+                                    </li>
+                                </a>
+                            </ul>
+                            <!-- slide page 1 end -->
+
+                            <ul class="slide">
+                                <a href="javascript: void(0)">
+                                    <li class="slide-item">
+                                        <div class="ticket-img">
+                                            <img src="img/goods/tic1.webp">
+                                        </div>
+                                        <div class="ticket-info">
+                                            <h3 class="tic-money">
+                                                <i class="icon-money">$</i>
+                                                <span>2</span>
                                             </h3>
                                             <h4 class="tic-limit">满500元可用</h4>
                                             <p class="tic-desc">全品类（除特殊商品）【14点限量抢】 </p>
@@ -1785,6 +2152,7 @@
             </div>
         </div>
     </div>
+
     <div id="st-home" class="stage">
         <div class="wrapper">
             <div class="st-header">
@@ -1946,6 +2314,7 @@
             </div>
         </div>
     </div>
+
     <div id="st-special" class="stage">
         <div class="wrapper">
             <div class="st-header">
@@ -2155,7 +2524,428 @@
             </div>
         </div>
     </div>
+
+    <div id="st-live" class="stage">
+        <div class="wrapper">
+            <div class="st-header">
+                <h3 class="title">京东直播</h3>
+            </div>
+            <div class="st-body">
+                <div class="third-box">
+                    <a href="javascript:void(0)">
+                        <ul>
+                            <li>
+                                <div class="img-wrapper">
+                                    <img src="img/banner/5a783fe1N632b6044.jpg">
+                                </div>
+                            
+                                <i class="icon-play"></i>
+                                <span>限时秒杀丨阿胶买一送一</span>
+                            </li>
+                            <li>
+                                <div class="img-wrapper">
+                                    <img src="img/banner/5a7923c9Nfe284631.jpg">
+                                </div>
+                                <i class="icon-play"></i>
+                                <span>优惠多多秒杀店铺优惠券</span>
+                            </li>
+                            <li>
+                                <div class="img-wrapper">
+                                    <img src="img/banner/5a791e27N94f0b43d.jpg">
+                                </div>
+                                <i class="icon-play"></i>
+                                <span>优惠多多满减秒杀</span>
+                            </li>
+                            <li>
+                                <div class="img-wrapper">
+                                    <img src="img/banner/5a781edbN2fabd43b.png">
+                                </div>
+                                <i class="icon-play"></i>
+                                <span>拍下立减现金 买一送一</span>
+                            </li>
+                        </ul>                    
+                    </a>
+
+                </div>
+                <div class="third-box">
+                    <a class="large" href="javascript:void(0)">
+                        <div class="img-wrapper">
+                            <img src="img/banner/5a74902cNe9db22a8.jpg">
+                        </div>
+                        <i class="icon-play"></i>
+                        <h3>小个子时尚穿搭指南</h3>
+                        <p>关注主播优惠多多</p>
+                    </a>
+                </div>
+                <div class="third-box last">
+                    <a href="javascript:void(0)">
+                        <ul>
+                            <li>
+                                <div class="img-wrapper">
+                                    <img src="img/banner/5a783fe1N632b6044.jpg">
+                                </div>
+                            
+                                <i class="icon-play"></i>
+                                <span>直播间限时优惠</span>
+                            </li>
+                            <li>
+                                <div class="img-wrapper">
+                                    <img src="img/banner/5a7923c9Nfe284631.jpg">
+                                </div>
+                                <i class="icon-play"></i>
+                                <span>满69减40</span>
+                            </li>
+                            <li>
+                                <div class="img-wrapper">
+                                    <img src="img/banner/5a791e27N94f0b43d.jpg">
+                                </div>
+                                <i class="icon-play"></i>
+                                <span>过年下单抢特惠</span>
+                            </li>
+                            <li>
+                                <div class="img-wrapper">
+                                    <img src="img/banner/5a781edbN2fabd43b.png">
+                                </div>
+                                <i class="icon-play"></i>
+                                <span>送礼佳品礼靓面子大</span>
+                            </li>
+                        </ul>                        
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="st-live" class="stage">
+        <div class="wrapper">
+            <div class="st-header">
+                <h3 class="title">还没逛够</h3>
+            </div>
+            <div class="st-body">
+                <ul class="item-list">
+                    <li class="item">
+                        <div class="item-content">
+                            <a href="javascript:void(0)">
+                                <div class="img-wrapper">
+                                    <img src="img/goods/5a5487c7N2fa5aeeb.jpg">
+                                </div>
+                                <div class="st-title">
+                                    <p>丹麦进口 Kjeldsens 丹麦蓝罐 曲奇饼干 礼盒 908g 盒装</p>
+                                    <div class="item-price-wrapper">
+                                        <i class="icon-money">¥</i>
+                                        <span class="item-price">99.00</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item-more">
+                            <div class="search-similar">
+                                <div class="search-btn">
+                                    <span>找相似</span>
+                                </div>
+                            </div>
+                            <div class="">
+                            
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="item">
+                        <div class="item-content">
+                            <a href="javascript:void(0)">
+                                <div class="img-wrapper">
+                                    <img src="img/goods/5951cbb4N4848ccec.jpg">
+                                </div>
+                                <div class="st-title">
+                                    <p>奔腾（POVOS）电吹风机 PH9036 家用大功率 恒温护发 6档冷热风 2200W</p>
+                                    <div class="item-price-wrapper">
+                                        <i class="icon-money">¥</i>
+                                        <span class="item-price">99.00</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item-more">
+                            <div class="search-similar">
+                                <div class="search-btn">
+                                    <span>找相似</span>
+                                </div>
+                            </div>
+                            <div class="">
+                            
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="item">
+                        <div class="item-content">
+                            <a href="javascript:void(0)">
+                                <div class="img-wrapper">
+                                    <img src="img/goods/5840f280N469a569b.jpg">
+                                </div>
+                                <div class="st-title">
+                                    <p>美的（Midea）电水壶WH415E2g 304不锈钢电热水壶 1.5L容量 无缝一体内胆 双层防烫烧水壶（红玉）</p>
+                                    <div class="item-price-wrapper">
+                                        <i class="icon-money">¥</i>
+                                        <span class="item-price">99.00</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item-more">
+                            <div class="search-similar">
+                                <div class="search-btn">
+                                    <span>找相似</span>
+                                </div>
+                            </div>
+                            <div class="">
+                            
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="item">
+                        <div class="item-content">
+                            <a href="javascript:void(0)">
+                                <div class="img-wrapper">
+                                    <img src="img/goods/599d1e83Nf5721589.jpg">
+                                </div>
+                                <div class="st-title">
+                                    <p>Yeelight充电感应夜灯光控LED小夜灯智能人体感应灯婴儿喂奶灯起夜灯床头灯可挂可贴可磁小米生态链</p>
+                                    <div class="item-price-wrapper">
+                                        <i class="icon-money">¥</i>
+                                        <span class="item-price">99.00</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item-more">
+                            <div class="search-similar">
+                                <div class="search-btn">
+                                    <span>找相似</span>
+                                </div>
+                            </div>
+                            <div class="">
+                            
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="item">
+                        <div class="item-content">
+                            <a href="javascript:void(0)">
+                                <div class="img-wrapper">
+                                    <img src="img/goods/5a389484N34404283.jpg">
+                                </div>
+                                <div class="st-title">
+                                    <p>【京东秒杀】光亮 洗车拖把洗车刷长杆汽车掸子洗车工具配件用品 【特价】棉线洗车刷套装</p>
+                                    <div class="item-price-wrapper">
+                                        <i class="icon-money">¥</i>
+                                        <span class="item-price">99.00</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item-more">
+                            <div class="search-similar">
+                                <div class="search-btn">
+                                    <span>找相似</span>
+                                </div>
+                            </div>
+                            <div class="">
+                            
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="item">
+                        <div class="item-content">
+                            <a href="javascript:void(0)">
+                                <div class="img-wrapper">
+                                    <img src="img/goods/5a5c68a7Naf7c3c03.jpg">
+                                </div>
+                                <div class="st-title">
+                                    <p>北极绒男士秋裤男纯棉基础秋衣秋裤男单件男士保暖裤薄款棉毛打底裤 藏青XL</p>
+                                    <div class="item-price-wrapper">
+                                        <i class="icon-money">¥</i>
+                                        <span class="item-price">99.00</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item-more">
+                            <div class="search-similar">
+                                <div class="search-btn">
+                                    <span>找相似</span>
+                                </div>
+                            </div>
+                            <div class="">
+                            
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>  
+    
+    <div class="footer">
+        <div class="jd-service">
+            <div class="wrapper">
+                <ul>
+                    <li>
+                        <i class="more"></i>
+                        <span>品类齐全，轻松购物</span>
+                    </li>
+                    <li>
+                        <i class="speed"></i>
+                        <span>多仓直发，极速配送</span>
+                    </li>
+                    <li>
+                        <i class="good"></i>
+                        <span>正品行货，精致服务</span>
+                    </li>
+                    <li>
+                        <i class="save"></i>
+                        <span>天天低价，畅选无忧</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="jd-helper">
+            <div class="wrapper">
+                <div class="guide">
+                    <span>购物指南</span>
+                    <ul>
+                        <li><a href="#">购物流程</a></li>
+                        <li><a href="#">会员介绍</a></li>
+                        <li><a href="#">生活旅行</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">大家电</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="guide">
+                    <span>购物指南</span>
+                    <ul>
+                        <li><a href="#">购物流程</a></li>
+                        <li><a href="#">会员介绍</a></li>
+                        <li><a href="#">生活旅行</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">大家电</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="guide">
+                    <span>购物指南</span>
+                    <ul>
+                        <li><a href="#">购物流程</a></li>
+                        <li><a href="#">会员介绍</a></li>
+                        <li><a href="#">生活旅行</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">大家电</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="guide">
+                    <span>购物指南</span>
+                    <ul>
+                        <li><a href="#">购物流程</a></li>
+                        <li><a href="#">会员介绍</a></li>
+                        <li><a href="#">生活旅行</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">大家电</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="guide">
+                    <span>购物指南</span>
+                    <ul>
+                        <li><a href="#">购物流程</a></li>
+                        <li><a href="#">会员介绍</a></li>
+                        <li><a href="#">生活旅行</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">大家电</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="jd-area">
+                    <h5>京东自营覆盖区县</h5>
+                    <p>
+                        京东已向全国2661个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。
+                        <a href="#">查看详情></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="jd-coperight">
+            <div class="wrapper">
+                <div>
+                    <a href="">关于我们</a>
+                    <span class="pipe">|</span>
+                    <a href="">联系我们</a>
+                    <span class="pipe">|</span>
+                    <a href="">联系客服</a>
+                    <span class="pipe">|</span>
+                    <a href="">合作招商</a>
+                    <span class="pipe">|</span>
+                    <a href="">商家帮助</a>
+                    <span class="pipe">|</span>
+                    <a href="">营销中心</a>
+                    <span class="pipe">|</span>
+                    <a href="">手机京东</a>
+                    <span class="pipe">|</span>
+                    <a href="">友情链接</a>
+                    <span class="pipe">|</span>
+                    <a href="">销售联盟</a>
+                    <span class="pipe">|</span>
+                    <a href="">京东社区</a>
+                    <span class="pipe">|</span>
+                    <a href="">京东社区</a>
+                    <span class="pipe">|</span>
+                    <a href="">京东社区</a>
+                    <span class="pipe">|</span>
+                    <a href="">京东社区</a>
+                    <span class="pipe">|</span>
+                    <a href="">京东社区</a>
+                    <span class="pipe">|</span>
+                    <a href="">京东社区</a>
+                </div>
+                <div class="info">
+                    <p>
+                        <a href="">京公网安备 11000002000088号</a>
+                        <span class="pipe">|</span>
+                        <a href="">京ICP证070359号</a>
+                        <span class="pipe">|</span>
+                        <a href="">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a>
+                        <span class="pipe">|</span>
+                        <a href="">新出发京零 字第大120007号</a>
+                    </p>
+                    <p>
+                        <a href="">互联网出版许可证编号新出网证(京)字150号</a>
+                        <span class="pipe">|</span>
+                        <a href="">出版物经营许可证</a>
+                        <span class="pipe">|</span>
+                        <a href="">网络文化经营许可证京网文[2014]2148-348号</a>
+                        <span class="pipe">|</span>
+                        <a href="">违法和不良信息举报电话：4006561155</a>
+                    </p>
+                    <p>
+                        <a href="">Copyright © 2004 - 2017  京东JD.com 版权所有</a>
+                        <span class="pipe">|</span>
+                        <a href="">消费者维权热线：4006067733经营证照</a>
+                    </p>
+                    <p>
+                        <a href="">京东旗下网站：京东支付</a>
+                        <span class="pipe">|</span>
+                        <a href="">京东云</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> 
     <script type="text/javascript" src="js/slideshow.js"></script>
-<script type="text/javascript" src="js/index.js"></script>   
+    <script type="text/javascript" src="js/index.js"></script>   
 </body>
 </html>

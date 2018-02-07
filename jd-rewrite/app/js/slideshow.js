@@ -2,11 +2,10 @@ var SlideShow = function(slideshowEle, animType, autoRun, parameters) {
 
     parameters = parameters || {};
     this.gpu = parameters.gpu !== undefined ? parameters.gpu : true;
-    this.autoRun = parameters.autoRun !== undefined ? parameters.autoRun : true;
     this.startSlide = parameters.startSlide !== undefined ? parameters.startSlide : 0;
-
-    this.autoRun = false;
     this.pause = false;
+    
+    this.autoRun = autoRun !== undefined ? autoRun : false;
     this.index = this.startSlide; 
     this.animType = animType;
     this.slideshowEle = slideshowEle;
@@ -80,7 +79,7 @@ SlideShow.prototype.style = {
     ].join(''),
     roll: [
         '.roll{',
-        'transition: 0.6s ease;',
+        'transition: 0.3s ease;',
         'position: relative',
         '}',
     ].join(''),
@@ -98,7 +97,7 @@ SlideShow.prototype.run = function() {
         if (_this.autoRun && !_this.pause) {
             _this.setFocus();
         }
-    }, 2000);
+    }, 4000);
 };
 
 SlideShow.prototype.setFocus = function(index, who) {
@@ -108,10 +107,8 @@ SlideShow.prototype.setFocus = function(index, who) {
 
 SlideShow.prototype.roll = function() {
     var endSlide = this.slides[0].cloneNode(true);
-    // endSlide.style.background = 'green';
     this.slidesEle.append(endSlide);
     this.slidesEle.classList.add('roll');
-    // this.slides[this.slides.length - 2].style.background = 'yellow';
 };
 
 SlideShow.prototype.roll.setFocus = function(slideIndex, who) {
@@ -203,16 +200,28 @@ SlideShow.prototype.fadein.setFocus = function(slideIndex) {
 };
 
 var ele = document.querySelector('.grid_1 .slideshow');
-var topBanner = new SlideShow(ele, 'fadein');
+var topBanner = new SlideShow(ele, 'fadein', true);
 
-var ele = document.querySelector('.secondkill .slideshow');
+var ele = document.querySelector('.secondkill .sek-goods .slideshow');
 var seckill = new SlideShow(ele, 'roll', false);
 
-var ele = document.querySelector('.grid_2 .sale-rank .tab-item-1');
-var rank = new SlideShow(ele, 'roll', false);
+var ele = document.querySelector('.secondkill .banner-w .slideshow');
+var seckill = new SlideShow(ele, 'roll', true);
 
 var ele = document.querySelector('.grid_3 .find .slideshow');
 var findme = new SlideShow(ele, 'roll',false);
 
 var ele = document.querySelector('#st-special .slideshow');
 var findme = new SlideShow(ele, 'roll', true);
+
+var rankList = document.querySelectorAll('.grid_2 .sale-rank .slideshow');
+for (var i = 0; i < rankList.length; i++) {
+    var rank = new SlideShow(rankList[i], 'roll', false);
+}
+
+var ele = document.querySelector('.grid_2 .pick-series .slideshow');
+var willbuy = new SlideShow(ele, 'roll', false);
+
+var ele = document.querySelector('.grid_2 .get-ticket .slideshow');
+var willbuy = new SlideShow(ele, 'roll', false);
+

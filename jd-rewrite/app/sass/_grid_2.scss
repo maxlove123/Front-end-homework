@@ -26,11 +26,19 @@
 .grid_2 .sale-rank .tab-items {
     position:relative;
     height: 356px;
+    margin: 0 20px;
+    > div[class|="tab-item"] {
+        position:absolute;
+        top: 0;
+        left:0;
+        background:#fff;
+    }
     .slideshow {
-        width: 350px;
-        margin:0 auto;
-        height: 100%;
+        z-index: 0;
         overflow: hidden;
+        width: 350px;
+        height: 100%;
+        margin:0 auto;
         .dots {
             @include dots;
         }
@@ -75,94 +83,40 @@
                 }
             }
         }
+        // slideshow:after
         &:after {
             position: absolute;
             bottom: 36px;
-            left: 20px;
+            // left: 20px;
             display: block;
             width: 350px;
-            height:1px;  // slideshow:after
-            content: "";
+            height:1px;    content: "";
             background: #f5f5f5;
-            
-        }        
+            }        
     }
 }
 
 .grid_2 .pick-series .box-body {  
     .slideshow {
         overflow: hidden;
+        width: 390px;
         height: 390px;
-        .slides {
-            position: relative;
+        
+        .slides-wrapper {
+            overflow: hidden;
             width: 350px;
-            height: 355px;
+            height: 390px;
             margin: 0 auto;
+            outline: 1px yellow;
+        }
+        .slides {
+            width: 2000px;
+            height: 355px;
             .slide {
-                position: absolute;
-                top: 0;
-                left: 0;
+                position: relative;
+                float: left;
                 width: 350px;
                 height: 355px;
-                .slide-info {
-                    position: absolute;
-                    bottom: 0;
-                    width: 100%;
-                    height: 210px;
-                    padding-top: 50px;  text-align: center; color: #fff;
-                    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAEGCAYAAACkZ/+FAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAAASklEQVQ4y+2SsQ3AMAzDaPcL/39otkxpwcbo1CyEBAqeTFVFApEAM71CSmHrbbJC1I7Y3FlEAtdnlzs7K2wVovNI9k+fwaIe/AEDTU0DWD9lY84AAAAASUVORK5CYII=) repeat-x 0 bottom;
-                    h3 {
-                        position:relative;
-                        display: inline-block;
-                        width: 140px;
-                        margin-top: 90px;
-                        span {
-                            display: inline-block;
-                            overflow: hidden;
-                            width: 130px;
-                            font-size: 18px;
-                            line-height: 24px;
-                            white-space: nowrap;
-                            text-overflow: ellipsis;
-                        }
-                        &:before,&:after {
-                            position: absolute;
-                            top: 50%;
-                            width: 47px;
-                            height: 1px;
-                            content: "";
-                            background-color: #fff;
-                            // transform: translateY(-50%);
-                        }
-                        &:before {
-                            left: -50px;
-                        }
-                        &:after {
-                            right: -50px;
-                        }
-                    }  
-                    h4 {
-                        overflow: hidden;
-                        width: 235px;
-                        height: 14px;
-                        margin: 4px auto 10px;
-                        line-height:14px;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                    }    
-                    button {
-                        width: 80px;
-                        height: 30px;
-                        line-height: 11px;
-                        color: #fff;
-                        border: 1px solid #fff;
-                        background-color: rgba(0,0,0,0);
-                        &:hover {
-                            border: 1px solid transparent;
-                            background-color: $jd-red;
-                        }
-                    }     
-                }
             }         
         }
         .dots {
@@ -170,19 +124,85 @@
         }
         .slideshow-controls {
             @include slideshow-controls;
+            .slideshow-con-prev {}
         }
     }
+}
+
+.grid_2 .pick-series .box-body .slide-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 210px;
+    padding-top: 50px;  text-align: center; color: #fff;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAEGCAYAAACkZ/+FAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAAASklEQVQ4y+2SsQ3AMAzDaPcL/39otkxpwcbo1CyEBAqeTFVFApEAM71CSmHrbbJC1I7Y3FlEAtdnlzs7K2wVovNI9k+fwaIe/AEDTU0DWD9lY84AAAAASUVORK5CYII=) repeat-x 0 bottom;
+    h3 {
+        position:relative;
+        display: inline-block;
+        width: 140px;
+        margin-top: 90px;
+        span {
+            display: inline-block;
+            overflow: hidden;
+            width: 130px;
+            font-size: 18px;
+            line-height: 24px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        &:before,&:after {
+            position: absolute;
+            top: 50%;
+            width: 47px;
+            height: 1px;
+            content: "";
+            background-color: #fff;
+        }
+        &:before {
+            left: -50px;
+        }
+        &:after {
+            right: -50px;
+        }
+    }  
+    h4 {
+        overflow: hidden;
+        width: 235px;
+        height: 14px;
+        margin: 4px auto 10px;
+        line-height:14px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }    
+    button {
+        width: 80px;
+        height: 30px;
+        line-height: 11px;
+        color: #fff;
+        border: 1px solid #fff;
+        background-color: rgba(0,0,0,0);
+        &:hover {
+            border: 1px solid transparent;
+            background-color: $jd-red;
+        }
+    }     
 }
 
 .grid_2 .get-ticket .box-body {
     
     .slideshow {
+        overflow: hidden;
         height: 100%;
-        padding: 0 20px;
+        margin: 0 20px;
         .slides {
-            .slide-item:nth-of-type(2) {
-                background: #eeefed;
+            width: 2000px;
+            .slide {
+                float: left;
+                .slide-item:nth-of-type(2) {
+                    background: #eeefed;
+                }                
             }
+
         }
         .dots {
             @include dots;

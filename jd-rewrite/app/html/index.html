@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
-
+    <style type="text/css">
+        .top-banner {
+            transition: 0.2s ease;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
     <div class="top-banner">
         <div class="wrapper">
             <a href="javascript:void(0)"><img src="img/banner/5a5719adN1cbc2e64.jpg"></a>
-            <a href="javascript:void(0)"><i class="icon close"></i></a>
+            <a id="top-hide-btn" href="javascript:void(0)"><i class="icon close"></i></a>
         </div>
     </div>
     @@include("sitenav.html")
@@ -19,8 +24,9 @@
     @@include("secondkill.html")
     @@include("grid_2.html")
     @@include("grid_3.html")
-    @@include("fashion.html")
+    @@include("fashion.html")  
+    @@include("footer.html") 
     <script type="text/javascript" src="js/slideshow.js"></script>
-<script type="text/javascript" src="js/index.js"></script>   
+    <script type="text/javascript" src="js/index.js"></script>   
 </body>
 </html>

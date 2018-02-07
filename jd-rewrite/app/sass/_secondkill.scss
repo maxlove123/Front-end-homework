@@ -93,9 +93,9 @@
     .slideshow {
         overflow: hidden;
         .slides {
+           position:relative;
            width: 5000px;
            height: 275px;
-           position:relative;
        }
        .slideshow-controls {
             @include slideshow-controls;
@@ -111,22 +111,22 @@
         width: 200px;
         height: 275px;
         a {
-            overflow: hidden;
             position: relative;
-            margin: 0 5px;
+            display: block;
+            overflow: hidden;
             width: 180px;
             height: 275px;
-            display: block;
+            margin: 0 5px;
         }
         i.icon-flage {
-            z-index: 10;
             position: absolute;
+            z-index: 10;
             top: 0;
             left: 0;
             width: 30px;
             height: 40px;
-            text-align: center;
             line-height: 16px;
+            text-align: center;
             color: #fff;
             background: url(../img/icon/sprite.seckill.png) no-repeat;
             background-position: 0px -26px;
@@ -185,25 +185,21 @@
 }
 
 .secondkill .banner-w {
-    position: relative;  
-    float:left;
+    position: relative;    float:left;
     width: 180px;
     height: 260px;
     padding: 8px 10px 7px;
-
-    
-    .slide-show {
+    .slideshow {
         position: relative;
-        // overflow: hidden;
+        overflow:hidden;
         height: 100%;
-        .slide-box {
+        .slides {
+            width: 600px;
             li {
-                position: absolute;
-                top: 0;
-                left: 0;
+                float: left;
             }
         }
-        .dots-box {
+        .dots {
             position: absolute;
             bottom: 16px;
             left: 50%;
@@ -215,7 +211,7 @@
                 height: 6px;
                 border-radius: 50%;
                 background:#c0c0c0;
-                &:hover {
+                &:hover, &.focus {
                     background: #e33333;
                 }
                 &:not(last-child) {

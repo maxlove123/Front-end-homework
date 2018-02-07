@@ -117,6 +117,7 @@
     // height: 100%;
     margin-top: 10px;
     background: white;
+    position: relative;
 }
 
 .grid_1 .rnav .userInf {
@@ -226,6 +227,7 @@
 
 .serviceTag {
     overflow: hidden;
+    // position: relative;
     height: 160px;
     padding:10px 15px 15px;
     .tag {
@@ -334,11 +336,32 @@
 }
 
 .serviceTag .info {
-    width: 100%;
+    width: 160px;
+    outline: 1px solid black;
+    left: 0;
+    padding:0 15px;
+    bottom: -30px;
     height: 180px;
-    margin-top: 200px;
     background-color: #fff;
-    
+    position: absolute;
+    overflow: hidden;
+    transition: 0.2s ease-out;
+    .info-tag {
+        overflow: hidden;
+        padding-bottom: 2px;
+        li {
+            float:left;
+            border-bottom:2px solid #fff;
+            width:40px;
+            height:14px;
+            line-height:14px;
+            text-align:center;
+            padding-bottom: 4px;
+            &:hover {
+                border-bottom-color:#e01121;
+            }
+        }
+    }
     .nav {
         overflow: hidden;
         margin-bottom: 5px;
@@ -361,6 +384,17 @@
             text-align: left;
             
         }
+    }
+}
+
+.serviceTag .info .tag-content{
+    width: 100%;
+    height: 160px;
+    position:relative;
+    .tc-item {
+        position: absolute;
+        top: 0;
+        background: #fff;
     }
 }
 
