@@ -29,41 +29,88 @@ function switchNotice(){
 }
 
 function serviceTagEnt(){
-    var serviceTag = document.querySelector('.serviceTag');
-    var info = serviceTag.querySelector('.info');
-    function _e() {
-        info.style.bottom = '0px';
-    }
+    var serviceTag = $('.serviceTag');
+    var info = serviceTag.find('.info');
+    var tagList = serviceTag.find('.tag li');
 
-    var tagList = serviceTag.querySelectorAll('.tag li');
-    for (var i = 0; i <= 4; i++) {
-        tagList[i].addEventListener('mouseenter', function(event){
-            _e(event);
+    tagList.each(function(i,tagNode){
+        $(tagNode).on('mouseenter', function(){
+            info.css('bottom','0px');
         });
-    }
-        
+    });
 }
 
-function rankEnt() {
-    var tagList = document.querySelectorAll('.sale-rank .tabs li');
-    var contentList = document.querySelectorAll('.sale-rank .tab-items .slideshow');
-    for (var i = 0; i < tagList.length; i++) {
-        tagList[i].setAttribute('data-index', i);
-        tagList[i].addEventListener('mouseenter', function(event){
-            for (var j = 0; j < contentList.length; j++) {
-                contentList[j].style.display = 'none';
-            }
-            var target = event.target;
-            var index = target.getAttribute('data-index');
-            contentList[index].style.display = 'block';
+function serviceInfoEnt() {
+    var infoNode = $('.grid_1 .serviceTag .info');
+    var nav = infoNode.find('.info-tag li');
+    var contentList = infoNode.find('.tc-item');
+
+    nav.each(function(i, navNode){
+        $(navNode).on('mouseenter',function(){
+            $(contentList[i]).show();
+            $(contentList[i]).siblings().hide();
+        });       
+    });
+
+    contentList.each(function(i, contentNode){
+        var secondNavList = $(contentNode).find('.second-nav li');
+        var secondContentList = $(contentNode).find('.optionList li');
+        secondNavList.each(function(i,secondNavNode){
+            $(secondNavNode).on('mouseenter',function(){
+                $(secondContentList[i]).show();
+                $(secondContentList[i]).siblings().hide();                    
+            });
+
         });
-    }
+    });
+}
+
+function grid1LnavEnt(){
+    var lnavContent = $('.grid_1 #lnav-content');
+    $('.grid_1 .lnav li').each(function(i, navNode){
+        $(navNode).on('mouseenter', function(){
+            lnavContent.show();
+        });
+        $(navNode).on('mouseleave', function(){
+            lnavContent.hide();
+        });
+    });
+}
+
+// function rankEnt() {
+//     var tagList = document.querySelectorAll('.sale-rank .tabs li');
+//     var contentList = document.querySelectorAll('.sale-rank .tab-items .slideshow');
+//     for (var i = 0; i < tagList.length; i++) {
+//         tagList[i].setAttribute('data-index', i);
+//         tagList[i].addEventListener('mouseenter', function(event){
+//             for (var j = 0; j < contentList.length; j++) {
+//                 contentList[j].style.display = 'none';
+//             }
+//             var target = event.target;
+//             var index = target.getAttribute('data-index');
+//             contentList[index].style.display = 'block';
+//         });
+//     }
+// }
+
+function rankEnt() {
+    var tagList = $('.sale-rank .tabs li');
+    var contentList = $('.sale-rank .tab-items .slideshow');
+    tagList.each(function(i, tagNode){
+        $(tagNode).on('mouseenter', function(){
+            $(contentList[i]).show();
+            $(contentList[i]).siblings().hide();
+        });
+    });
 }
 
 function init() {
     hideTopBar();
+    grid1LnavEnt();
     switchNotice();
     serviceTagEnt();
     rankEnt();
+    serviceInfoEnt();
 }
+
 init();

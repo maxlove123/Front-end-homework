@@ -227,7 +227,7 @@
 
 .serviceTag {
     overflow: hidden;
-    // position: relative;
+    position: relative;
     height: 160px;
     padding:10px 15px 15px;
     .tag {
@@ -336,14 +336,14 @@
 }
 
 .serviceTag .info {
+    position: absolute;
+    bottom: -200px;
     width: 160px;
-    outline: 1px solid black;
     left: 0;
     padding:0 15px;
-    bottom: -30px;
     height: 180px;
     background-color: #fff;
-    position: absolute;
+    
     overflow: hidden;
     transition: 0.2s ease-out;
     .info-tag {
@@ -362,22 +362,72 @@
             }
         }
     }
-    .nav {
+    .tc-item-content {
+        margin-top: 10px;
         overflow: hidden;
         margin-bottom: 5px;
-        ul {
-            display: inline;
-        }
-        ul li {
-            display: inline;
-            float:left;
-            overflow: auto;
-            margin-right: 10px;
-            text-wrap: nowrap;
-            border: 0;
-            &:last-child {
-                margin-right: 0px;
+        .second-nav {
+            margin-right: -20px;
+            overflow: hidden;
+            li {
+                width: 56px;
+                float: left;
+                &:hover {
+                    color: $jd-red;
+                }
             }
+        }
+        .optionList {
+
+            display: inline-block;
+            li {
+                width: 100%;
+                display: inline;
+                float:left;
+                overflow: auto;
+                margin-right: 10px;
+                text-wrap: nowrap;
+                border: 0;
+                div {
+                    margin-top: 10px;
+                }
+                 input,select {
+                    width: 125px;
+                    height: 20px;
+                    float: right;
+                    box-sizing: border-box;
+                    font-size: 12px;
+                    border:1px solid #e7e7e7;
+                 }
+                 input {
+                    padding-left: 4px;
+                 }
+                 .ad {
+                    >p {
+                        color: $jd-red;
+                    }
+                    button {
+                        background: $jd-red;
+                        border: none;
+                        width: 68px;
+                        height: 20px;
+                        border-radius: 16px;
+                        color: #fff;
+                        padding-bottom: 2px;
+                    }
+                    a {
+                        color: #5476db;
+                        line-height: 22px;
+                        &:hover {
+                            color: $jd-red;
+
+                        }
+                    }
+                 }
+               &:last-child {
+                   margin-right: 0px;
+               }
+           }
         }
         a {
             font-size: 12px;
@@ -394,7 +444,9 @@
     .tc-item {
         position: absolute;
         top: 0;
+        width:  100%;
         background: #fff;
+
     }
 }
 
@@ -458,6 +510,120 @@
             .sale-info {
                 color: #55f;
             }
+        }
+    }
+}
+
+#tc-hotel {
+    .optionList {
+        .option {
+            input {
+                width: 100px;
+                height: 18px;
+                line-height: 20px;
+                border: 1px solid #e7e7e7;
+                padding-left: 10px;
+                color: #aaa;
+            } 
+            #select-station {
+                width: 100%;
+            }           
+            .ad {
+                margin-top: 10px;
+                span {
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+#lnav-content {
+    display: none;
+    position: absolute;
+    left: 190px;
+    width: 958px;
+    padding: 20px;
+    min-height: 440px;
+    background-color: #f7f7f7;
+    box-shadow: 2px 0 5px rgba(0,0,0,.3);
+    z-index: 30;
+    transition: 0.4s ease;  
+}
+
+#lnav-content .l-main .top-label {
+    height:  24px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    li {
+        position: relative;
+        float: left;
+        background: #333;
+        margin-right: 15px;
+        color: #fff;
+        padding-left: 10px;
+        padding-right: 24px;
+        height: 24px;
+        line-height: 24px;
+        transition: 0.4s ease;
+        
+        &:after {
+            content: "";
+            position: absolute;
+            right: 10px;
+            top: calc(50% - 5px);
+
+            display: block;
+            width: 10px;
+            height: 10px;
+            color: red;
+            background-color: #fff;
+        }
+        &:hover {
+            background-color: #666;
+        }
+    }
+}
+
+#lnav-content .l-main .goods-type-container {
+    width: 800px;
+    .goods-type {
+        width: 100%;
+        min-height: 24px;
+        overflow: hidden;
+        dl {
+            dt {
+                float: left;
+                margin-right: 10px;
+                width: 70px;
+                text-align: right;
+                font-weight: bold;
+                margin-top: 10px;
+                line-height: 16px;
+                height: 16px;
+            }
+            dd {
+                margin-left: 80px;
+                border-bottom: 1px solid #e0e0e0;
+                padding: 6px 0;
+                overflow: hidden;
+                ul li{
+                    float: left;
+                    border-left: 1px solid #e0e0e0;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    line-height: 16px;
+                    color: #666;
+                    height: 16px;
+                    margin-top: 4px;
+                    margin-bottom: 4px;
+                    white-space: nowrap;
+                    /* text-align: center; */
+                }
+            }  
+            &:last-child dd{
+                border-bottom: none;
+            }          
         }
     }
 }

@@ -1147,6 +1147,7 @@ i.icon-empty-cart {
 
 .serviceTag {
   overflow: hidden;
+  position: relative;
   height: 160px;
   padding: 10px 15px 15px;
 }
@@ -1254,14 +1255,13 @@ i.icon-empty-cart {
 }
 
 .serviceTag .info {
+  position: absolute;
+  bottom: -200px;
   width: 160px;
-  outline: 1px solid black;
   left: 0;
   padding: 0 15px;
-  bottom: -30px;
   height: 180px;
   background-color: #fff;
-  position: absolute;
   overflow: hidden;
   transition: 0.2s ease-out;
 }
@@ -1285,16 +1285,32 @@ i.icon-empty-cart {
   border-bottom-color: #e01121;
 }
 
-.serviceTag .info .nav {
+.serviceTag .info .tc-item-content {
+  margin-top: 10px;
   overflow: hidden;
   margin-bottom: 5px;
 }
 
-.serviceTag .info .nav ul {
-  display: inline;
+.serviceTag .info .tc-item-content .second-nav {
+  margin-right: -20px;
+  overflow: hidden;
 }
 
-.serviceTag .info .nav ul li {
+.serviceTag .info .tc-item-content .second-nav li {
+  width: 56px;
+  float: left;
+}
+
+.serviceTag .info .tc-item-content .second-nav li:hover {
+  color: #f10215;
+}
+
+.serviceTag .info .tc-item-content .optionList {
+  display: inline-block;
+}
+
+.serviceTag .info .tc-item-content .optionList li {
+  width: 100%;
   display: inline;
   float: left;
   overflow: auto;
@@ -1303,11 +1319,51 @@ i.icon-empty-cart {
   border: 0;
 }
 
-.serviceTag .info .nav ul li:last-child {
+.serviceTag .info .tc-item-content .optionList li div {
+  margin-top: 10px;
+}
+
+.serviceTag .info .tc-item-content .optionList li input, .serviceTag .info .tc-item-content .optionList li select {
+  width: 125px;
+  height: 20px;
+  float: right;
+  box-sizing: border-box;
+  font-size: 12px;
+  border: 1px solid #e7e7e7;
+}
+
+.serviceTag .info .tc-item-content .optionList li input {
+  padding-left: 4px;
+}
+
+.serviceTag .info .tc-item-content .optionList li .ad > p {
+  color: #f10215;
+}
+
+.serviceTag .info .tc-item-content .optionList li .ad button {
+  background: #f10215;
+  border: none;
+  width: 68px;
+  height: 20px;
+  border-radius: 16px;
+  color: #fff;
+  padding-bottom: 2px;
+}
+
+.serviceTag .info .tc-item-content .optionList li .ad a {
+  color: #5476db;
+  line-height: 22px;
+}
+
+.serviceTag .info .tc-item-content .optionList li .ad a:hover {
+  color: #f10215;
+}
+
+.serviceTag .info .tc-item-content .optionList li:last-child {
   margin-right: 0px;
 }
 
-.serviceTag .info .nav a {
+.serviceTag .info .tc-item-content a {
   font-size: 12px;
   text-align: left;
 }
@@ -1321,6 +1377,7 @@ i.icon-empty-cart {
 .serviceTag .info .tag-content .tc-item {
   position: absolute;
   top: 0;
+  width: 100%;
   background: #fff;
 }
 
@@ -1388,6 +1445,121 @@ i.icon-empty-cart {
 
 .serviceTag .option .option-1 .search .sale-info {
   color: #55f;
+}
+
+#tc-hotel .optionList .option input {
+  width: 100px;
+  height: 18px;
+  line-height: 20px;
+  border: 1px solid #e7e7e7;
+  padding-left: 10px;
+  color: #aaa;
+}
+
+#tc-hotel .optionList .option #select-station {
+  width: 100%;
+}
+
+#tc-hotel .optionList .option .ad {
+  margin-top: 10px;
+}
+
+#tc-hotel .optionList .option .ad span {
+  float: right;
+}
+
+#lnav-content {
+  display: none;
+  position: absolute;
+  left: 190px;
+  width: 958px;
+  padding: 20px;
+  min-height: 440px;
+  background-color: #f7f7f7;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 30;
+  transition: 0.4s ease;
+}
+
+#lnav-content .l-main .top-label {
+  height: 24px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+#lnav-content .l-main .top-label li {
+  position: relative;
+  float: left;
+  background: #333;
+  margin-right: 15px;
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 24px;
+  height: 24px;
+  line-height: 24px;
+  transition: 0.4s ease;
+}
+
+#lnav-content .l-main .top-label li:after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 5px);
+  display: block;
+  width: 10px;
+  height: 10px;
+  color: red;
+  background-color: #fff;
+}
+
+#lnav-content .l-main .top-label li:hover {
+  background-color: #666;
+}
+
+#lnav-content .l-main .goods-type-container {
+  width: 800px;
+}
+
+#lnav-content .l-main .goods-type-container .goods-type {
+  width: 100%;
+  min-height: 24px;
+  overflow: hidden;
+}
+
+#lnav-content .l-main .goods-type-container .goods-type dl dt {
+  float: left;
+  margin-right: 10px;
+  width: 70px;
+  text-align: right;
+  font-weight: bold;
+  margin-top: 10px;
+  line-height: 16px;
+  height: 16px;
+}
+
+#lnav-content .l-main .goods-type-container .goods-type dl dd {
+  margin-left: 80px;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 6px 0;
+  overflow: hidden;
+}
+
+#lnav-content .l-main .goods-type-container .goods-type dl dd ul li {
+  float: left;
+  border-left: 1px solid #e0e0e0;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 16px;
+  color: #666;
+  height: 16px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  /* text-align: center; */
+}
+
+#lnav-content .l-main .goods-type-container .goods-type dl:last-child dd {
+  border-bottom: none;
 }
 
 .secondkill .wrapper {
